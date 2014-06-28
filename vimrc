@@ -100,10 +100,11 @@ nmap <C-_>i :cs find i <C-R>=expand("<cfile>")<CR><CR> :copen<CR><CR>
 
 "--- Clang Complete Settings ---
 let g:clang_use_library = 1
-" CentOS install clang manually before use below path
-let g:clang_library_path = '/usr/local/lib'
-" Ubuntu apt-get install libclang-dev before use below path
-" let g:clang_library_path = '/usr/lib/llvm-3.2/lib'
+" CentOS install clang manually before use below path.
+" let g:clang_library_path = '/usr/local/lib'
+" Ubuntu apt-get install libclang-dev before use below path.
+" Use $locate libclang to locat libclang after install.
+let g:clang_library_path = '/usr/lib/llvm-3.4/lib'
 let g:clang_complete_copen = 1
 let g:clang_complete_macros = 1
 "let g:clang_complete_patterns = 1
