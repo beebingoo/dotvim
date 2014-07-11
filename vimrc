@@ -1,3 +1,4 @@
+"--- Common setting ---
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -22,13 +23,13 @@ set termencoding=utf-8
 set encoding=utf-8
 
 "--- Fold setting ---
-set foldmethod=syntax               " 用语法高亮来定义折叠
-set foldlevel=100                   " 启动vim时不要自动折叠代码
-" set foldcolumn=5                  " 设置折叠栏宽度
+set foldmethod=syntax               " Syntax highlighting items specify folds.
+set foldlevel=100
+" set foldcolumn=5                  " set fold width
 
 "--- Taglist setting ---
-let Tlist_Process_File_Always=1     "实时更新tags
-let Tlist_File_Fold_Auto_Close=1    "非当前文件，函数列表折叠隐藏
+let Tlist_Process_File_Always=1     " real-time update tags
+let Tlist_File_Fold_Auto_Close=1    " automatically close the tags tree for inactive files
 let Tlist_Close_On_Select = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
 
@@ -47,7 +48,12 @@ Bundle 'gmarik/vundle'
 " original GitHub repos
 Bundle 'kien/ctrlp.vim'
 " Bundle 'scrooloose/nerdtree'
-Bundle 'vim-scripts/snipMate'
+" Legacy snipMate repo.
+" Bundle 'vim-scripts/snipMate'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle 'honza/vim-snippets'
+Bundle 'garbas/vim-snipmate'
 Bundle 'Rip-Rip/clang_complete'
 
 " vim-script repos
@@ -74,16 +80,14 @@ syntax on
 
 "--- Cscope setting ---
 if has("cscope")
-	set csprg=/usr/bin/cscope      " 指定用来执行cscope的命令
-	set csto=0        " 设置cstag命令查找次序：
-	                  "               0先找cscope数据库再找标签文件
-					  "               1先找标签文件再找cscope数据库
-	set cst                        " 同时搜索cscope数据库和标签文件
-	set cscopequickfix=s-,c-,d-,i-,t-,e- " 使用QuickFix窗口来显示cscope查找结果
+	set csprg=/usr/bin/cscope      " specifies the command to execute cscope.
+	set csto=0                     " determines search order.
+	set cst                        " search database as well as tag files.
+	set cscopequickfix=s-,c-,d-,i-,t-,e- " specifies wherher to use quickfix to show cscope results
 	set nocsverb
-	if filereadable("cscope.out")  " add any database in current directory
-		cs add cscope.out
-	elseif $CSCOPE_DB != ""        " else add the database was pointed by enviroment
+	if filereadable("cscope.out")  " add cscope database if exist
+		cs add cscope.out          
+	elseif $CSCOPE_DB != ""        " else add the database pointed by enviroment
 		cs add $CSCOPE_DB
 	endif
 	set csverb
@@ -124,6 +128,10 @@ autocmd CursorMovedI * if pumvisible() == 0 && bufname("%") != "[Command Line]"|
 autocmd InsertLeave * if pumvisible() == 0 && bufname("%") != "[Command Line]"|pclose|endif
 
 "--- Key binding ---
+" <tab> in snipmate conflict with clang_complete
+imap <C-J> <Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
+
 " F9 open taglist
 nnoremap <silent> <F9> :TlistToggle<CR>
 
