@@ -8,6 +8,9 @@ set number
 set undofile
 " set a directory to store the undo history
 set undodir=~/.vimundo/
+" disable auto start a comment line
+" autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+au FileType c,cpp setlocal comments-=:// comments+=f://
 
 "--- Color scheme setting ---
 se t_Co=256
