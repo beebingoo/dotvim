@@ -148,7 +148,8 @@ nnoremap <F7> :setl noai nocin nosi inde=<CR>
 " nnoremap <silent> <F7> :tabnew<CR>
 
 " F6 next tab
-nnoremap <silent> <f6> :tabn<CR>
+" nnoremap <silent> <f6> :tabn<CR>
+nnoremap <silent> <f6> :setlocal comments-=:// comments+=f://<CR>
 
 " F5 delete all trailing whitespace
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
