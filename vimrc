@@ -112,7 +112,7 @@ let g:clang_use_library = 1
 " Ubuntu apt-get install libclang-dev before use below path.
 " Use $locate libclang to locate libclang after install,
 " or find /usr -name libclang*
-let g:clang_library_path = '/usr/lib/'
+let g:clang_library_path = '/usr/local/lib'
 let g:clang_complete_copen = 1
 let g:clang_complete_macros = 1
 "let g:clang_complete_patterns = 1
@@ -130,28 +130,37 @@ set conceallevel=2
 autocmd CursorMovedI * if pumvisible() == 0 && bufname("%") != "[Command Line]"|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0 && bufname("%") != "[Command Line]"|pclose|endif
 
+" Troubleshootings
+" Q: The completion works with the clang executable but when I use the clang library I have the following error message: 'User defined completion (^U^N^P) Pattern not found'
+" A: Most of the time this is due to a compilation error. To identify the problem do :call g:ClangUpdateQuickFix() followed by :copen. If you do not see any compilation problem and you still have '... Pattern not found' check that the clang library's is correctly loaded (put some debug messages in libclang.py to understand what happens).
+
 "--- Key binding ---
 " <tab> in snipmate conflict with clang_complete
 imap <C-J> <Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
 
-" F9 open taglist
+" F9 toggle taglist
 nnoremap <silent> <F9> :TlistToggle<CR>
 
-" F8 assignment
+" F8 toggle NERDTree
 " nnoremap <silent> <F8> :NERDTreeToggle<CR>     " open nerdtree
-" Highlight matches without moving
+" F8 Highlight matches without moving
 nnoremap <F8> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
 
 " F7 create a new tab
-nnoremap <F7> :setl noai nocin nosi inde=<CR>
 " nnoremap <silent> <F7> :tabnew<CR>
+" F7 disable auto indent
+nnoremap <F7> :setl noai nocin nosi inde=<CR>
 
 " F6 next tab
 " nnoremap <silent> <f6> :tabn<CR>
+" F6 temporary disable auto comment
 nnoremap <silent> <f6> :setlocal comments-=:// comments+=f://<CR>
 
 " F5 delete all trailing whitespace
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 " F5 previous tab
 " nnoremap <silent> <F5> :tabp<CR>
+
+" F4 show clang output
+nnoremap <F4> :call g:ClangUpdateQuickFix()<CR>
