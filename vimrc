@@ -4,6 +4,9 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set number
+set autowrite
+set showcmd
+set clipboard+=unnamed             " Sync clipboard with system's.
 " use an undo file
 set undofile
 " set a directory to store the undo history
