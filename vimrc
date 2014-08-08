@@ -7,11 +7,11 @@ set number
 set autowrite
 set showcmd
 set clipboard+=unnamed             " Sync clipboard with system's.
-" use an undo file
+" Use an undo file
 set undofile
-" set a directory to store the undo history
+" Set a directory to store the undo history
 set undodir=~/.vimundo/
-" disable auto start a comment line
+" Disable auto start a comment line
 " autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 au FileType c,cpp setlocal comments-=:// comments+=f://
 
@@ -31,38 +31,37 @@ set encoding=utf-8
 "--- Fold setting ---
 set foldmethod=syntax               " Syntax highlighting items specify folds.
 set foldlevel=100
-" set foldcolumn=5                  " set fold width
+" set foldcolumn=5                  " Set fold width
 
 "--- Taglist setting ---
-let Tlist_Process_File_Always=1     " real-time update tags
-let Tlist_File_Fold_Auto_Close=1    " automatically close the tags tree for inactive files
+let Tlist_Process_File_Always=1     " Real-time update tags
+let Tlist_File_Fold_Auto_Close=1    " Automatically close the tags tree for inactive files
 let Tlist_Close_On_Select = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
 
 "--- Vundle setting ---
-set nocompatible               " be iMproved
-filetype off                   " required!
+set nocompatible               " Be iMproved
+filetype off                   " Required!
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-" required! 
+" Required! 
 Bundle 'gmarik/vundle'
 " My Bundles here
-" original GitHub repos
+" Original GitHub repos
 Bundle 'kien/ctrlp.vim'
 " Bundle 'scrooloose/nerdtree'
-" Legacy snipMate repo.
-" Bundle 'vim-scripts/snipMate'
+" Bundle 'vim-scripts/snipMate'        " Legacy snipMate repo.
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
 Bundle 'Rip-Rip/clang_complete'
 
-" vim-script repos
+" Vim-script repos
 " Bundle 'OmniCppComplete'
 Bundle 'surround.vim'
 Bundle 'taglist.vim'
@@ -70,7 +69,7 @@ Bundle 'tComment'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 
-filetype plugin indent on     " required!
+filetype plugin indent on     " Required!
  
  " Brief help
  " :BundleList          - list configured bundles
@@ -86,12 +85,12 @@ syntax on
 
 "--- Cscope setting ---
 if has("cscope")
-	set csprg=/usr/bin/cscope      " specifies the command to execute cscope.
-	set csto=0                     " determines search order.
-	set cst                        " search database as well as tag files.
-	set cscopequickfix=s-,c-,d-,i-,t-,e- " specifies wherher to use quickfix to show cscope results
+	set csprg=/usr/bin/cscope      " Specifies the command to execute cscope.
+	set csto=0                     " Determines search order.
+	set cst                        " Search database as well as tag files.
+	set cscopequickfix=s-,c-,d-,i-,t-,e- " Specifies wherher to use quickfix to show cscope results
 	set nocsverb
-	if filereadable("cscope.out")  " add cscope database if exist
+	if filereadable("cscope.out")  " Add cscope database if exist
 		cs add cscope.out          
 	elseif $CSCOPE_DB != ""        " else add the database pointed by enviroment
 		cs add $CSCOPE_DB
