@@ -69,6 +69,7 @@ Bundle 'tComment'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'Align'
+Bundle 'a.vim'
 
 filetype plugin indent on     " Required!
  
