@@ -60,6 +60,7 @@ Bundle "tomtom/tlib_vim"
 Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
 Bundle 'Rip-Rip/clang_complete'
+Bundle 'terryma/vim-multiple-cursors'
 
 " Vim-script repos
 " Bundle 'OmniCppComplete'
