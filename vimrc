@@ -54,7 +54,10 @@ Bundle 'gmarik/vundle'
 " Original GitHub repos
 Bundle 'kien/ctrlp.vim'
 " Bundle 'scrooloose/nerdtree'
-" Bundle 'vim-scripts/snipMate'        " Legacy snipMate repo.
+Bundle 'scrooloose/nerdcommenter'
+" Legacy snipMate repo.
+" Bundle 'vim-scripts/snipMate'
+" snipmate dependent
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle 'honza/vim-snippets'
@@ -67,6 +70,7 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'surround.vim'
 Bundle 'taglist.vim'
 Bundle 'tComment'
+" FuzzyFinder dependent
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'Align'
