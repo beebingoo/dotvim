@@ -65,6 +65,7 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'scrooloose/syntastic'
+Bundle 'sjl/gundo.vim'
 
 " Vim-script repos
 " Bundle 'OmniCppComplete'
@@ -173,4 +174,6 @@ nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 " nnoremap <silent> <F5> :tabp<CR>
 
 " F4 show clang output
-nnoremap <F4> :call g:ClangUpdateQuickFix()<CR>
+" nnoremap <F4> :call g:ClangUpdateQuickFix()<CR>
+" Toggle Gundo
+nnoremap <F4> :GundoToggle<CR>
