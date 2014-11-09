@@ -64,6 +64,7 @@ Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'scrooloose/syntastic'
 
 " Vim-script repos
 " Bundle 'OmniCppComplete'
