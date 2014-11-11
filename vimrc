@@ -66,6 +66,7 @@ Bundle 'Rip-Rip/clang_complete'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'scrooloose/syntastic'
 Bundle 'sjl/gundo.vim'
+Bundle 'Lokaltog/vim-powerline'
 
 " Vim-script repos
 " Bundle 'OmniCppComplete'
@@ -144,6 +145,10 @@ autocmd InsertLeave * if pumvisible() == 0 && bufname("%") != "[Command Line]"|p
 " Troubleshootings
 " Q: The completion works with the clang executable but when I use the clang library I have the following error message: 'User defined completion (^U^N^P) Pattern not found'
 " A: Most of the time this is due to a compilation error. To identify the problem do :call g:ClangUpdateQuickFix() followed by :copen. If you do not see any compilation problem and you still have '... Pattern not found' check that the clang library's is correctly loaded (put some debug messages in libclang.py to understand what happens).
+
+"--- Plugin setting ---
+" Powerline
+set laststatus=2
 
 "--- Key binding ---
 " <tab> in snipmate conflict with clang_complete
