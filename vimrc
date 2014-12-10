@@ -66,6 +66,8 @@ Bundle 'Rip-Rip/clang_complete'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'scrooloose/syntastic'
 Bundle 'sjl/gundo.vim'
+Bundle 'Yggdroot/indentLine'
+" Bundle 'nathanaelkane/vim-indent-guides'
 
 " Vim-script repos
 " Bundle 'OmniCppComplete'
