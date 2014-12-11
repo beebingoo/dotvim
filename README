@@ -1,0 +1,44 @@
+Configure Powerline Fonts using fontconfig
+
+1. Download the latest version of PowerlineSymbols OpenType font.
+$ wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf
+2. Move the downloaded font to one of your X font directories; ~/.fonts/,
+   ~/.local/share/fonts/ or /usr/local/share/fonts/. (~/.fonts/ is deprecated
+   and will not be read in the future versions)
+$ mv PowerlineSymbols.otf ~/.local/share/fonts/
+3. Update the system’s font cache.
+$ sudo fc-cache -f -v
+4. Download and move the corresponding fontconfig file to ~/.fonts.conf/ or
+   $XDG_CONFIG_HOME/fontconfig/fonts.conf/. If $XDG_CONFIG_HOME is not set, the
+   path defaults to $HOME/.config where the user-specific files are typically
+   located. The path would vary depending on your fontconfig version. For more
+   information: $ man fonts-conf
+---------------------------------------
+$ wget https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
+# Create a per-user fontconfig folder if it doesn't already exist
+$ mkdir -p ~/.config/fontconfig/fonts.conf
+$ mv 10-powerline-symbols.conf ~/.config/fontconfig/fonts.conf/
+---------------------------------------
+5. Restart your terminal and run $ vim to see the power and beauty of your newly
+   installed Powerline.
+
+--------------------------------------------------------------------------------
+Vim Airline: Alternative to Vim Powerline;
+A Statusline for Vim that’s light as air
+
+1. Add 'Plugin 'bling/vim-airline' in your vimrc.
+2. Open vim and execute :source % and then :PluginInstall
+3. For the nice looking symbols to appear, download and install one of the
+   prepatched fonts from powerline-fonts repository. To do so run the following
+   commands in your terminal.
+---------------------------------------
+# Download and install 'Sauce Code Powerline', a prepatched font designed for
+# Powerline and Airline users which is derived from Adobe's Source Code Pro
+$ wget https://raw.githubusercontent.com/Lokaltog/powerline-fonts/master/SourceCodePro/Sauce%20Code%20Powerline%20Regular.otf
+$ mv Sauce\ Code\ Powerline\ Regular.otf ~/.local/share/fonts/
+$ sudo fc-cache -v
+---------------------------------------
+4. Next you need to add this to your .vimrc to enable automatic population of
+   the g:airline_symbols:
+let g:airline_powerline_fonts=1
+5. Update your terminal profile or Gvim to use the pre-patched font. Restart the terminal and vim, and you’re golden!

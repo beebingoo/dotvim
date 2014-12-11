@@ -66,7 +66,9 @@ Bundle 'Rip-Rip/clang_complete'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'scrooloose/syntastic'
 Bundle 'sjl/gundo.vim'
-Bundle 'Lokaltog/vim-powerline'
+" Legacy powerline repo
+" Bundle 'Lokaltog/vim-powerline'
+Plugin 'bling/vim-airline'
 Bundle 'Yggdroot/indentLine'
 " Bundle 'nathanaelkane/vim-indent-guides'
 
@@ -151,6 +153,8 @@ autocmd InsertLeave * if pumvisible() == 0 && bufname("%") != "[Command Line]"|p
 "--- Plugin setting ---
 " Powerline
 set laststatus=2
+" airline
+let g:airline_powerline_fonts=1
 
 "--- Key binding ---
 " <tab> in snipmate conflict with clang_complete
