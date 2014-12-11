@@ -23,12 +23,19 @@ $ mv 10-powerline-symbols.conf ~/.config/fontconfig/fonts.conf/
    installed Powerline.
 
 --------------------------------------------------------------------------------
+Lokaltog/vim-powerline, is a legacy vim plugin developed by Lokaltog.
+Note: This Plugin is currently in maintenance mode, no feature requests will be
+      accepted. Vim-powerline will be deprecated in favour of
+      https://github.com/Lokaltog/powerline once it is ready.
+
 Vim Airline: Alternative to Vim Powerline;
 A Statusline for Vim that’s light as air
 
 1. Add 'Plugin 'bling/vim-airline' in your vimrc.
 2. Open vim and execute :source % and then :PluginInstall
-3. For the nice looking symbols to appear, download and install one of the
+3. For normal user, config Powerline fonts in above section is already enough
+   to rock.
+   For the nice looking symbols to appear, download and install one of the
    prepatched fonts from powerline-fonts repository. To do so run the following
    commands in your terminal.
 ---------------------------------------
@@ -41,4 +48,5 @@ $ sudo fc-cache -v
 4. Next you need to add this to your .vimrc to enable automatic population of
    the g:airline_symbols:
 let g:airline_powerline_fonts=1
-5. Update your terminal profile or Gvim to use the pre-patched font. Restart the terminal and vim, and you’re golden!
+5. Update your terminal profile or Gvim to use the pre-patched font. Restart
+   the terminal and vim, and you’re golden!
