@@ -78,6 +78,7 @@ Bundle 'sjl/gundo.vim'
 Plugin 'bling/vim-airline'
 Bundle 'Yggdroot/indentLine'
 " Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'majutsushi/tagbar'
 
 "-- Vim-script repos
 " Bundle 'OmniCppComplete'
@@ -181,7 +182,8 @@ imap <C-J> <Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
 
 "-- F9 toggle taglist
-nnoremap <silent> <F9> :TlistToggle<CR>
+" nnoremap <silent> <F9> :TlistToggle<CR>
+nnoremap <silent> <F9> :TagbarToggle<CR>
 
 "-- F8 toggle NERDTree
 " nnoremap <silent> <F8> :NERDTreeToggle<CR>     " open nerdtree
