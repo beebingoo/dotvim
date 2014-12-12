@@ -79,6 +79,7 @@ Plugin 'bling/vim-airline'
 Bundle 'Yggdroot/indentLine'
 " Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'majutsushi/tagbar'
+Bundle 'Raimondi/delimitMate'
 
 "-- Vim-script repos
 " Bundle 'OmniCppComplete'
