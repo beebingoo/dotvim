@@ -36,14 +36,6 @@ set foldlevel=100
 "-- Set fold width
 " set foldcolumn=5
 
-"--- Taglist setting ---
-"-- Real-time update tags
-let Tlist_Process_File_Always=1
-"-- Automatically close the tags tree for inactive files
-let Tlist_File_Fold_Auto_Close=1
-let Tlist_Close_On_Select = 1
-let Tlist_GainFocus_On_ToggleOpen = 1
-
 "--- Vundle setting ---
 "-- Be iMproved
 set nocompatible
@@ -172,6 +164,13 @@ autocmd InsertLeave * if pumvisible() == 0 && bufname("%") != "[Command Line]"|p
 "    in libclang.py to understand what happens).
 
 "--- Plugin setting ---
+"-- Taglist setting
+"--- Real-time update tags
+let Tlist_Process_File_Always=1
+"--- Automatically close the tags tree for inactive files
+let Tlist_File_Fold_Auto_Close=1
+let Tlist_Close_On_Select = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
 "-- Powerline
 set laststatus=2
 "-- airline
