@@ -83,6 +83,7 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'Align'
 Bundle 'a.vim'
+Plugin 'DoxygenToolkit.vim'
 
 filetype plugin indent on     " Required!
  
@@ -175,6 +176,15 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 set laststatus=2
 "-- airline
 let g:airline_powerline_fonts=1
+"-- DoxygenToolkit
+let g:DoxygenToolkit_briefTag_pre="Synopsis: "
+let g:DoxygenToolkit_paramTag_pre="Param: "
+let g:DoxygenToolkit_returnTag="Returns: "
+let g:DoxygenToolkit_authorName="beebingoo"
+let g:DoxygenToolkit_authorTag="Author: "
+let g:DoxygenToolkit_fileTag="File: "
+let g:DoxygenToolkit_dateTag="Date: "
+let g:DoxygenToolkit_versionTag="Version: "
 
 "--- Key binding ---
 "-- <tab> in snipmate conflict with clang_complete
