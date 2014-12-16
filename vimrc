@@ -72,6 +72,7 @@ Bundle 'Yggdroot/indentLine'
 " Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'majutsushi/tagbar'
 Bundle 'Raimondi/delimitMate'
+Bundle 'rking/ag.vim'
 
 "-- Vim-script repos
 " Bundle 'OmniCppComplete'
