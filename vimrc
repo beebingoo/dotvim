@@ -73,6 +73,7 @@ Bundle 'Yggdroot/indentLine'
 Bundle 'majutsushi/tagbar'
 Bundle 'Raimondi/delimitMate'
 Bundle 'rking/ag.vim'
+Bundle 'Shougo/unite.vim'
 
 "-- Vim-script repos
 " Bundle 'OmniCppComplete'
