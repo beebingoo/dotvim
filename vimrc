@@ -86,6 +86,7 @@ Bundle 'FuzzyFinder'
 Bundle 'Align'
 Bundle 'a.vim'
 Plugin 'DoxygenToolkit.vim'
+Bundle 'SuperTab'
 
 filetype plugin indent on     " Required!
  
