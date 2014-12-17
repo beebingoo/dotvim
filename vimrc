@@ -77,6 +77,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'Raimondi/delimitMate'
 Bundle 'rking/ag.vim'
 Bundle 'Shougo/unite.vim'
+Plugin 'airblade/vim-gitgutter'
 
 "-- Vim-script repos
 " Bundle 'OmniCppComplete'
