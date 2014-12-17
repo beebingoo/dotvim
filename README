@@ -50,3 +50,22 @@ $ sudo fc-cache -v
 let g:airline_powerline_fonts=1
 5. Update your terminal profile or Gvim to use the pre-patched font. Restart
    the terminal and vim, and you’re golden!
+
+--------------------------------------------------------------------------------
+Highlight unwanted spaces
+
+For occasional use, you can simply search using a suitable pattern to highlight
+what you want. The following examples assume you use search highlighting (:set
+hlsearch).
+
+" Show all tabs:
+/\t
+
+" Show trailing whitespace:
+/\s\+$
+
+" Show trailing whitespace only after some text (ignores blank lines):
+/\S\zs\s\+$
+
+" Show spaces before a tab:
+/ \+\ze\t
