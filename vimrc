@@ -93,6 +93,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'rking/ag.vim'
 Bundle 'Shougo/unite.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-sleuth'
 
 "-- Vim-script repos
 " Bundle 'OmniCppComplete'
