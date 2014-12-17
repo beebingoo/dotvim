@@ -225,3 +225,6 @@ nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 " nnoremap <F4> :call g:ClangUpdateQuickFix()<CR>
 "-- Toggle Gundo
 nnoremap <F4> :GundoToggle<CR>
+
+"-- F2 Toggle paste mode
+set pastetoggle=<F2>
