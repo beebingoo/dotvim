@@ -22,6 +22,9 @@ se t_Co=256
 set background=light
 colorscheme desert256
 set colorcolumn=80
+set textwidth=80
+"-- Useful to align text.
+" set cursorcolumn
 " hi ColorColumn guibg=#354248
 
 "--- Set file encoding ---
