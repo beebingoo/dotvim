@@ -6,6 +6,7 @@ set expandtab
 set number
 set autowrite
 set showcmd
+set wildmenu
 "-- Sync clipboard with system's.
 set clipboard+=unnamed
 "-- Use an undo file
