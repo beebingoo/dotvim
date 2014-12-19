@@ -50,7 +50,15 @@ $ sudo fc-cache -v
 let g:airline_powerline_fonts=1
 5. Update your terminal profile or Gvim to use the pre-patched font. Restart
    the terminal and vim, and you’re golden!
+--------------------------------------------------------------------------------
+airline through SSH with putty
 
+1. Download font from https://github.com/powerline/fonts
+2. Install patched font on windows
+   Run %windir%/Fonts
+File->Install new font
+3. Putty setting
+Window->Appearance->Font
 --------------------------------------------------------------------------------
 Highlight unwanted spaces
 
