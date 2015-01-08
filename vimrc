@@ -197,6 +197,8 @@ let Tlist_Process_File_Always=1
 let Tlist_File_Fold_Auto_Close=1
 let Tlist_Close_On_Select = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
+"-- CtrlP
+let g:ctrlp_max_files=0
 "-- Powerline
 set laststatus=2
 "-- airline
