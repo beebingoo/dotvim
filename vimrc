@@ -21,12 +21,13 @@ au FileType c,cpp setlocal comments-=:// comments+=f://
 se t_Co=256
 " let g:solarized_termcolors=256
 set background=light
-colorscheme desert256
-set colorcolumn=80
+" colorscheme desert256
+highlight ColorColumn ctermfg=yellow ctermbg=black guibg=#2c2d27
+" set colorcolumn=80
+let &colorcolumn=join(range(81,999),",")
 set textwidth=80
 "-- Useful to align text.
 " set cursorcolumn
-" hi ColorColumn guibg=#354248
 
 "--- Set file encoding ---
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
