@@ -86,6 +86,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-sleuth'
 Plugin 'hari-rangarajan/CCTree'
 Bundle 'ntpeters/vim-better-whitespace'
+"--- color scheme
+Plugin 'nanotech/jellybeans.vim'
 
 "-- Vim-script repos
 " Bundle 'OmniCppComplete'
@@ -117,8 +119,8 @@ syntax on
 "--- Color scheme setting ---
 se t_Co=256
 " let g:solarized_termcolors=256
-set background=light
-colorscheme desert256
+set background=dark
+colorscheme jellybeans
 highlight ColorColumn ctermfg=yellow ctermbg=black guibg=#2c2d27
 " set colorcolumn=80
 let &colorcolumn=join(range(81,999),",")
