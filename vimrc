@@ -17,18 +17,6 @@ set undodir=~/.vimundo/
 " autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 au FileType c,cpp setlocal comments-=:// comments+=f://
 
-"--- Color scheme setting ---
-se t_Co=256
-" let g:solarized_termcolors=256
-set background=light
-" colorscheme desert256
-highlight ColorColumn ctermfg=yellow ctermbg=black guibg=#2c2d27
-" set colorcolumn=80
-let &colorcolumn=join(range(81,999),",")
-set textwidth=80
-"-- Useful to align text.
-" set cursorcolumn
-
 "--- Set file encoding ---
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
@@ -125,6 +113,18 @@ filetype plugin indent on     " Required!
 
 syntax enable
 syntax on
+
+"--- Color scheme setting ---
+se t_Co=256
+" let g:solarized_termcolors=256
+set background=light
+colorscheme desert256
+highlight ColorColumn ctermfg=yellow ctermbg=black guibg=#2c2d27
+" set colorcolumn=80
+let &colorcolumn=join(range(81,999),",")
+set textwidth=80
+"-- Useful to align text.
+" set cursorcolumn
 
 "--- Cscope setting ---
 if has("cscope")
