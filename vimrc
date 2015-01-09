@@ -96,6 +96,7 @@ Bundle 'Shougo/unite.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-sleuth'
 Plugin 'hari-rangarajan/CCTree'
+Bundle 'ntpeters/vim-better-whitespace'
 
 "-- Vim-script repos
 " Bundle 'OmniCppComplete'
