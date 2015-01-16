@@ -124,7 +124,7 @@ se t_Co=256
 " let g:solarized_termcolors=256
 set background=dark
 colorscheme molokai
-highlight ColorColumn ctermfg=yellow ctermbg=black guibg=#2c2d27
+highlight ColorColumn ctermfg=yellow ctermbg=bg guibg=#2c2d27
 " set colorcolumn=80
 let &colorcolumn=join(range(81,999),",")
 set textwidth=80
