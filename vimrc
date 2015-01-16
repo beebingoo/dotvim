@@ -90,6 +90,7 @@ Bundle 'ntpeters/vim-better-whitespace'
 Plugin 'godlygeek/tabular'
 "--- color scheme
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'tomasr/molokai'
 
 "-- Vim-script repos
 " Bundle 'OmniCppComplete'
@@ -122,7 +123,7 @@ syntax on
 se t_Co=256
 " let g:solarized_termcolors=256
 set background=dark
-colorscheme jellybeans
+colorscheme molokai
 highlight ColorColumn ctermfg=yellow ctermbg=black guibg=#2c2d27
 " set colorcolumn=80
 let &colorcolumn=join(range(81,999),",")
