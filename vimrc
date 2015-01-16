@@ -55,7 +55,7 @@ call vundle#rc()
 
 "-- let Vundle manage Vundle
 "-- ($ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle)
-"-- Required! 
+"-- Required!
 Bundle 'gmarik/vundle'
 "-- My Bundles here
 "-- Original GitHub repos
@@ -103,7 +103,7 @@ Plugin 'DoxygenToolkit.vim'
 Bundle 'SuperTab'
 
 filetype plugin indent on     " Required!
- 
+
  " Brief help
  " :BundleList          - list configured bundles
  " :BundleInstall(!)    - install(update) bundles
