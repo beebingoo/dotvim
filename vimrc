@@ -87,6 +87,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-sleuth'
 Plugin 'hari-rangarajan/CCTree'
 Bundle 'ntpeters/vim-better-whitespace'
+Plugin 'godlygeek/tabular'
 "--- color scheme
 Plugin 'nanotech/jellybeans.vim'
 
@@ -98,7 +99,7 @@ Bundle 'tComment'
 "-- FuzzyFinder dependent
 " Bundle 'L9'
 " Bundle 'FuzzyFinder'
-Bundle 'Align'
+" Bundle 'Align'
 Bundle 'a.vim'
 Plugin 'DoxygenToolkit.vim'
 Bundle 'SuperTab'
