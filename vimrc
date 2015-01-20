@@ -1,16 +1,15 @@
 "--- Common setting --- {{{
-set tabstop=4
+set tabstop=4          " number of visual spaces per TAB
 set shiftwidth=4
-set softtabstop=4
-set expandtab
-set number
+set softtabstop=4      " number of spaces in tab when editing
+set expandtab          " tabs are spaces
+set number             " show line numbers
 set autowrite
-set showcmd
-set wildmenu
-"-- Sync clipboard with system's.
-set clipboard+=unnamed
-"-- Use an undo file
-set undofile
+set showcmd            " show command in bottom bar
+set wildmenu           " visual autocomplete for command menu
+set clipboard+=unnamed " sync clipboard with system's
+set undofile           " use an undo file
+set incsearch          " search as characters are entered
 "-- Set a directory to store the undo history
 set undodir=~/.vimundo/
 "-- Disable auto start a comment line
@@ -46,8 +45,7 @@ augroup END
 "-- Syntax highlighting items specify folds, will slow vim down
 set foldmethod=syntax
 set foldlevel=100
-"-- Set fold width
-" set foldcolumn=5
+" set foldcolumn=5     " set fold width
 " }}}
 
 "--- Vundle setting --- {{{
