@@ -105,6 +105,7 @@ Bundle 'a.vim'
 Plugin 'DoxygenToolkit.vim'
 Bundle 'SuperTab'
 Plugin 'gtags.vim'
+Bundle 'DrawIt'
 
 "-- Slow-down vim plugin {{{
 "--- Legacy powerline repo
