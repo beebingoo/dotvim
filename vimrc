@@ -180,7 +180,14 @@ let g:clang_use_library = 1
 "-- Ubuntu ($ apt-get install libclang-dev) before use below path.
 "-- Use ($ locate libclang) to locate libclang after install,
 "-- or ($ find /usr -name libclang*)
-let g:clang_library_path = '/usr/local/lib'
+if has("unix")
+    let s:issue = system("cat /etc/issue | awk '$1 {print $1}'")
+    if s:issue == "Ubuntu\n"
+	let g:clang_library_path = '/usr/lib/llvm-3.4/lib/'
+    else
+	let g:clang_library_path = '/usr/local/lib'
+    endif
+endif
 let g:clang_complete_copen = 1
 let g:clang_complete_macros = 1
 "let g:clang_complete_patterns = 1
