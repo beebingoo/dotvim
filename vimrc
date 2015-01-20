@@ -16,28 +16,11 @@ set undodir=~/.vimundo/
 "-- Disable auto start a comment line
 " autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 au FileType c,cpp setlocal comments-=:// comments+=f://
-" }}}
-
-"--- Set file encoding --- {{{
+"-- Set file encoding
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
-" }}}
-
-"--- Fold setting --- {{{
-"-- Vimscript file settings
-augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
-    augroup END
-"-- Syntax highlighting items specify folds.
-set foldmethod=syntax
-set foldlevel=100
-"-- Set fold width
-" set foldcolumn=5
-" }}}
-
-"--- Auto paste mode --- {{{
+"-- Auto paste mode {{{
 if &term =~ "xterm.*"
     let &t_ti = &t_ti . "\e[?2004h"
     let &t_te = "\e[?2004l" . &t_te
@@ -51,6 +34,20 @@ if &term =~ "xterm.*"
     cmap <Esc>[200~ <nop>
     cmap <Esc>[201~ <nop>
 endif
+" }}}
+"-- Vimscript file settings
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
+
+"--- Slow down perform setting --- {{{
+"-- Syntax highlighting items specify folds, will slow vim down
+set foldmethod=syntax
+set foldlevel=100
+"-- Set fold width
+" set foldcolumn=5
 " }}}
 
 "--- Vundle setting --- {{{
@@ -82,9 +79,6 @@ Bundle 'Rip-Rip/clang_complete'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'scrooloose/syntastic'
 Bundle 'sjl/gundo.vim'
-"-- Legacy powerline repo
-" Bundle 'Lokaltog/vim-powerline'
-Plugin 'bling/vim-airline'
 Bundle 'Yggdroot/indentLine'
 " Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'majutsushi/tagbar'
@@ -104,7 +98,6 @@ Plugin 'tomasr/molokai'
 "-- Vim-script repos
 " Bundle 'OmniCppComplete'
 Bundle 'surround.vim'
-Bundle 'taglist.vim'
 Bundle 'tComment'
 "-- FuzzyFinder dependent
 " Bundle 'L9'
@@ -114,6 +107,13 @@ Bundle 'a.vim'
 Plugin 'DoxygenToolkit.vim'
 Bundle 'SuperTab'
 Plugin 'gtags.vim'
+
+"-- Slow-down vim plugin {{{
+"--- Legacy powerline repo
+" Bundle 'Lokaltog/vim-powerline'
+Plugin 'bling/vim-airline'
+" Bundle 'taglist.vim'
+"}}}
 
 filetype plugin indent on     " Required!
 
