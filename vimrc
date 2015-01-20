@@ -1,4 +1,4 @@
-"--- Common setting ---
+"--- Common setting --- {{{
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -16,20 +16,28 @@ set undodir=~/.vimundo/
 "-- Disable auto start a comment line
 " autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 au FileType c,cpp setlocal comments-=:// comments+=f://
+" }}}
 
-"--- Set file encoding ---
+"--- Set file encoding --- {{{
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
+" }}}
 
-"--- Fold setting ---
+"--- Fold setting --- {{{
+"-- Vimscript file settings
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+    augroup END
 "-- Syntax highlighting items specify folds.
 set foldmethod=syntax
 set foldlevel=100
 "-- Set fold width
 " set foldcolumn=5
+" }}}
 
-"--- Auto paste mode ---
+"--- Auto paste mode --- {{{
 if &term =~ "xterm.*"
     let &t_ti = &t_ti . "\e[?2004h"
     let &t_te = "\e[?2004l" . &t_te
@@ -43,8 +51,9 @@ if &term =~ "xterm.*"
     cmap <Esc>[200~ <nop>
     cmap <Esc>[201~ <nop>
 endif
+" }}}
 
-"--- Vundle setting ---
+"--- Vundle setting --- {{{
 "-- Be iMproved
 set nocompatible
 "-- Required!
@@ -119,8 +128,9 @@ filetype plugin indent on     " Required!
 
 syntax enable
 syntax on
+" }}}
 
-"--- Color scheme setting ---
+"--- Color scheme setting --- {{{
 se t_Co=256
 " let g:solarized_termcolors=256
 set background=dark
@@ -131,8 +141,9 @@ let &colorcolumn=join(range(81,999),",")
 set textwidth=80
 "-- Useful to align text.
 " set cursorcolumn
+" }}}
 
-"--- Cscope setting ---
+"--- Cscope setting --- {{{
 if has("cscope")
 "-- Specifies the command to execute cscope.
 	set csprg=/usr/bin/cscope
@@ -161,8 +172,9 @@ nmap <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR> :copen<CR><CR>
 nmap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR> :copen<CR><CR>
 nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap <C-_>i :cs find i <C-R>=expand("<cfile>")<CR><CR> :copen<CR><CR>
+" }}}
 
-"--- Clang Complete Settings ---
+"--- Clang Complete Settings --- {{{
 let g:clang_use_library = 1
 "-- CentOS install clang manually before use below path.
 " let g:clang_library_path = '/usr/local/lib'
@@ -196,8 +208,9 @@ autocmd InsertLeave * if pumvisible() == 0 && bufname("%") != "[Command Line]"|p
 "    see any compilation problem and you still have '... Pattern not found'
 "    check that the clang library's is correctly loaded (put some debug messages
 "    in libclang.py to understand what happens).
+" }}}
 
-"--- Plugin setting ---
+"--- Plugin setting --- {{{
 "-- Taglist setting
 "--- Real-time update tags
 let Tlist_Process_File_Always=1
@@ -220,8 +233,9 @@ let g:DoxygenToolkit_authorTag="Author: "
 let g:DoxygenToolkit_fileTag="File: "
 let g:DoxygenToolkit_dateTag="Date: "
 let g:DoxygenToolkit_versionTag="Version: "
+" }}}
 
-"--- Key binding ---
+"--- Key binding --- {{{
 "-- Gtags key mapping
 nmap <leader>d :Gtags <C-r><C-w><CR>
 nmap <leader>c :Gtags -r <C-r><C-w><CR>
@@ -262,3 +276,4 @@ nnoremap <F4> :GundoToggle<CR>
 
 "-- F2 Toggle paste mode
 set pastetoggle=<F2>
+" }}}
