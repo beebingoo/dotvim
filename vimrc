@@ -104,6 +104,7 @@ Bundle 'tComment'
 Bundle 'a.vim'
 Plugin 'DoxygenToolkit.vim'
 Bundle 'SuperTab'
+Plugin 'gtags.vim'
 
 filetype plugin indent on     " Required!
 
@@ -221,6 +222,11 @@ let g:DoxygenToolkit_dateTag="Date: "
 let g:DoxygenToolkit_versionTag="Version: "
 
 "--- Key binding ---
+"-- Gtags key mapping
+nmap <leader>d :Gtags <C-r><C-w><CR>
+nmap <leader>c :Gtags -r <C-r><C-w><CR>
+nmap <leader>t :Gtags -g <C-r><C-w><CR>
+
 "-- <tab> in snipmate conflict with clang_complete
 imap <C-J> <Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
