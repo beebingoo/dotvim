@@ -92,6 +92,7 @@ Plugin 'godlygeek/tabular'
 "--- color scheme
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'tomasr/molokai'
+Bundle 'croaker/mustang-vim'
 
 "-- Vim-script repos
 " Bundle 'OmniCppComplete'
@@ -133,7 +134,7 @@ syntax on
 se t_Co=256
 " let g:solarized_termcolors=256
 set background=dark
-colorscheme molokai
+colorscheme mustang
 highlight ColorColumn ctermfg=yellow ctermbg=bg guibg=#2c2d27
 " set colorcolumn=80
 let &colorcolumn=join(range(81,999),",")
