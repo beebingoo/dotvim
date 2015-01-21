@@ -242,6 +242,10 @@ let g:DoxygenToolkit_versionTag="Version: "
 " }}}
 
 "--- Key binding --- {{{
+"-- Insert time stamp
+imap <silent> <C-D><C-D> <C-R>=strftime("%Y-%b-%e")<CR>
+imap <silent> <C-T><C-T> <C-R>=strftime("%l:%M %p")<CR>
+
 "-- Gtags key mapping
 nmap <leader>d :Gtags <C-r><C-w><CR>
 nmap <leader>c :Gtags -r <C-r><C-w><CR>
