@@ -231,6 +231,7 @@ let g:ctrlp_max_files=0
 set laststatus=2
 "-- airline
 let g:airline_powerline_fonts=1
+let g:airline#extensions#tagbar#enabled = 0
 "-- DoxygenToolkit
 let g:DoxygenToolkit_briefTag_pre="Synopsis: "
 let g:DoxygenToolkit_paramTag_pre="Param: "
