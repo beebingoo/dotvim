@@ -69,8 +69,8 @@ Bundle 'scrooloose/nerdcommenter'
 "-- Legacy snipMate repo.
 " Bundle 'vim-scripts/snipMate'
 "-- snipmate dependent
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
 Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
 Bundle 'Rip-Rip/clang_complete'
