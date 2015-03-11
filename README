@@ -1,4 +1,5 @@
 Configure Powerline Fonts using fontconfig
+------------------------------------------
 
 1. Download the latest version of PowerlineSymbols OpenType font.
 $ wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf
@@ -19,10 +20,13 @@ $ wget https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbo
 $ mkdir -p ~/.config/fontconfig/fonts.conf
 $ mv 10-powerline-symbols.conf ~/.config/fontconfig/fonts.conf/
 ---------------------------------------
-5. Restart your terminal and run $ vim to see the power and beauty of your newly
-   installed Powerline.
+5. Restart your terminal and run fire up vim to see the power and beauty of your
+   newly installed Powerline.
 
 --------------------------------------------------------------------------------
+Vim Airline
+-----------
+
 Lokaltog/vim-powerline, is a legacy vim plugin developed by Lokaltog.
 Note: This Plugin is currently in maintenance mode, no feature requests will be
       accepted. Vim-powerline will be deprecated in favour of
@@ -41,7 +45,10 @@ A Statusline for Vim that’s light as air
 ---------------------------------------
 # Download and install 'Sauce Code Powerline', a prepatched font designed for
 # Powerline and Airline users which is derived from Adobe's Source Code Pro
-$ wget https://raw.githubusercontent.com/Lokaltog/powerline-fonts/master/SourceCodePro/Sauce%20Code%20Powerline%20Regular.otf
+$ git clone https://github.com/powerline/fonts
+$ cd fonts
+$ ./install.sh
+or install prepatched font manually
 $ mv Sauce\ Code\ Powerline\ Regular.otf ~/.local/share/fonts/
 $ sudo fc-cache -v
 ---------------------------------------
@@ -51,7 +58,8 @@ let g:airline_powerline_fonts=1
 5. Update your terminal profile or Gvim to use the pre-patched font. Restart
    the terminal and vim, and you’re golden!
 --------------------------------------------------------------------------------
-airline through SSH with putty
+Vim Airline through SSH with putty
+----------------------------------
 
 1. Download font from https://github.com/powerline/fonts
 2. Install patched font on windows
@@ -61,6 +69,7 @@ File->Install new font
 Window->Appearance->Font
 --------------------------------------------------------------------------------
 Highlight unwanted spaces
+-------------------------
 
 For occasional use, you can simply search using a suitable pattern to highlight
 what you want. The following examples assume you use search highlighting (:set
