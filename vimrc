@@ -178,8 +178,9 @@ nmap <C-_>i :cs find i <C-R>=expand("<cfile>")<CR><CR> :copen<CR><CR>
 let g:clang_use_library = 1
 "-- CentOS install clang manually before use below path.
 " let g:clang_library_path = '/usr/local/lib'
-"-- Ubuntu ($ apt-get install libclang-dev) before use below path.
+"-- Ubuntu (# apt-get install libclang-dev) before use below path.
 "-- Use ($ locate libclang) to locate libclang after install,
+"-- and (# updatedb) to update the database locate depend on,
 "-- or ($ find /usr -name libclang*)
 if has("unix")
     let s:issue = system("cat /etc/issue | awk '$1 {print $1}'")

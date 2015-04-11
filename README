@@ -87,3 +87,18 @@ hlsearch).
 
 " Show spaces before a tab:
 / \+\ze\t
+--------------------------------------------------------------------------------
+How-to install libclang
+-------------------------
+
+wget http://llvm.org/releases/3.3/llvm-3.3.src.tar.gz
+wget http://llvm.org/releases/3.3/cfe-3.3.src.tar.gz
+wget http://llvm.org/releases/3.3/clang-tools-extra-3.3.src.tar.gz
+wget http://llvm.org/releases/3.3/compiler-rt-3.3.src.tar.gz
+
+llvm-3.3.src/tools/clang          <-- cfe-3.3.src
+                  /clang/extra    <-- clang-tools-extra-3.3.src
+            /projects/compiler-rt <-- compiler-rt-3.3.src
+
+$ make
+# make install
