@@ -61,7 +61,8 @@ let g:airline_powerline_fonts=1
 Vim Airline through SSH with putty
 ----------------------------------
 
-1. Download font from https://github.com/powerline/fonts
+1. Download fonts from https://github.com/powerline/fonts, or copy the
+   DejaVuSansMono font under fonts/DejaVuSansMono folder.
 2. Install patched font on windows
    Run %windir%/Fonts
 File->Install new font
