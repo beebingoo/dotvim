@@ -1,16 +1,18 @@
 *setupnote.txt*                                        How-To setup vim and plugin
 ================================================================================
 
-CONTENTS                                                                |README|
+CONTENTS                                                             |SNCONTENT|
 
-How-To compile vim on CentOS 6.6                                     |RDcompile|
-Vim Airline                                                          |RDairline|
-Vim Airline through SSH with putty                             |RDairline_putty|
-Highlight unwanted spaces                                          |RD_HLspaces|
-How-to install libclang                                            |RD_libclang|
+How-To compile vim on CentOS 6.6                                     |SNcompile|
+Vim Airline                                                          |SNairline|
+Vim Airline through SSH with putty                             |SNairline_putty|
+Highlight unwanted spaces                                          |SN_HLspaces|
+How-to install libclang                                            |SN_libclang|
+vim helptags                                                        |SNhelptags|
+The requested URL returned error: 403 Forbidden                 |SN403Forbidden|
 ================================================================================
 --------------------------------------------------------------------------------
-How-To compile vim on CentOS 6.6                                     *RDcompile*
+How-To compile vim on CentOS 6.6                                     *SNcompile*
 --------------------------------
 
 PYTHON (vim7.4 needs python > 2.7.0)
@@ -119,8 +121,7 @@ $ mv 10-powerline-symbols.conf ~/.config/fontconfig/fonts.conf/
    newly installed Powerline.
 
 --------------------------------------------------------------------------------
-Vim Airline                                                          *RDairline*
------------
+Vim Airline                                                          *SNairline*
 
 Lokaltog/vim-powerline, is a legacy vim plugin developed by Lokaltog.
 Note: This Plugin is currently in maintenance mode, no feature requests will be
@@ -153,8 +154,7 @@ let g:airline_powerline_fonts=1
 5. Update your terminal profile or Gvim to use the pre-patched font. Restart
    the terminal and vim, and you’re golden!
 --------------------------------------------------------------------------------
-Vim Airline through SSH with putty                             *RDairline_putty*
-----------------------------------
+Vim Airline through SSH with putty                             *SNairline_putty*
 
 1. Download fonts from https://github.com/powerline/fonts, or copy the
    DejaVuSansMono font under fonts/DejaVuSansMono folder.
@@ -164,8 +164,7 @@ File->Install new font
 3. Putty setting
 Window->Appearance->Font
 --------------------------------------------------------------------------------
-Highlight unwanted spaces                                          *RD_HLspaces*
--------------------------
+Highlight unwanted spaces                                          *SN_HLspaces*
 
 For occasional use, you can simply search using a suitable pattern to highlight
 what you want. The following examples assume you use search highlighting (:set
@@ -183,8 +182,7 @@ hlsearch).
 " Show spaces before a tab:
 / \+\ze\t
 --------------------------------------------------------------------------------
-How-to install libclang                                            *RD_libclang*
--------------------------
+How-to install libclang                                            *SN_libclang*
 
 wget http://llvm.org/releases/3.3/llvm-3.3.src.tar.gz
 wget http://llvm.org/releases/3.3/cfe-3.3.src.tar.gz
@@ -198,8 +196,8 @@ llvm-3.3.src/tools/clang          <-- cfe-3.3.src
 $ make
 # make install
 --------------------------------------------------------------------------------
-vim helptags
-------------
+vim helptags                                                         *SNhelptags*
+
 INSTALL
  `-- doc
       |-- setupnote.txt
@@ -215,6 +213,21 @@ layer1                   |layer1|
 content of layer1        *layer1*
 vim:tw=78:ts=8:ft=help:norl:noet:fen:
 -- setupnote.txt End ------------------
+--------------------------------------------------------------------------------
+The requested URL returned error: 403 Forbidden                  *SN403Forbidden*
+
+$ git push origin master
+error: The requested URL returned error: 403 Forbidden while accessing https://github.com/beebingoo/dotvim/info/refs
+
+fatal: HTTP request failed
+
+$ git --version
+git version 1.7.1
+$ git remove set-url https://beebingoo@github.com/beebingoo/dotvim.git
+OR
+$ git clone https://username:password@github.com/org/project.git
+OR
+Install git > 1.7.10
 
 ================================================================================
 vim:tw=78:ts=8:ft=help:norl:noet:fen:
