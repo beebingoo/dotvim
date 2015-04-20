@@ -1,4 +1,99 @@
-Configure Powerline Fonts using fontconfig
+*setupnote.txt*                                        How-To setup vim and plugin
+================================================================================
+
+CONTENTS                                                                |README|
+
+How-To compile vim on CentOS 6.6                                     |RDcompile|
+Vim Airline                                                          |RDairline|
+Vim Airline through SSH with putty                             |RDairline_putty|
+Highlight unwanted spaces                                          |RD_HLspaces|
+How-to install libclang                                            |RD_libclang|
+================================================================================
+--------------------------------------------------------------------------------
+How-To compile vim on CentOS 6.6                                     *RDcompile*
+--------------------------------
+
+PYTHON (vim7.4 needs python > 2.7.0)
+------
+$ wget https://www.python.org/ftp/python/2.7.5/Python-2.7.5.tar.bz2
+$ cd Python-2.7.5
+$ ./configure
+$ make all
+# make install
+# mv /usr/bin/python /usr/bin/python2.6.6
+# ln -s /usr/local/bin/python2.7.5 /usr/bin/python
+
+TRUBLESHOOT
+-----------
+[xfile@localhost vim74]$ yum list
+There was a problem importing one of the Python modules
+required to run yum. The error leading to this problem was:
+
+   No module named yum
+
+Please install a package which provides this module, or
+verify that the module is installed correctly.
+
+It's possible that the above module doesn't match the
+current version of Python, which is:
+2.7.5 (default, Apr 12 2015, 20:54:21)
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-11)]
+
+If you cannot solve this problem yourself, please go to
+the yum faq at:
+  http://yum.baseurl.org/wiki/Faq
+
+
+# vi /usr/bin/yum
+#!/usr/bin/python2.6.6
+
++clickboard +xterm_clickboard
+-----------------------------
+1. Install dependencies
+# yum -y install libXt-devel
+# yum -y install libX11-devel
+$ sudo apt-get install libx11-dev libxt-dev libncurses5-dev
+2. Install vim Append --with-x to ./configure
+3. Check config.h with HAVE_X11
+$ grep X11 src/auto/config.h
+#define HAVE_X11 1
+#define HAVE_X11_SUNKEYSYM_H 1
+4. Check clipboard support after installation
+$ vim --version | grep clipboard
+$ vim
+:echo has('clipboard')
+1
+5. Set .vimrc
+$ vim ~/.vimrc
+set clipboard=unnamedplus
+6. Install X Server on windows
+Download X Server Xming
+http://sourceforge.net/projects/xming/files/latest/download
+7. Check Enable X11 forwarding in putty
+Connection --> SSH --> X11
+[*] Enable X11 forwarding
+X display location: localhost:0.0
+8. Check vim reg
+:reg
+"*   The windows clipboard content
+"+   The windows clipboard content
+
+
+INSTALL
+-------
+$ wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
+# yum remove vim
+# yum install ncurses-devel
+$ tar xjf vim-7.4.tar.bz2
+$ cd vim74
+$ ./configure --with-features=huge --prefix=/usr --enable-multibyte --enable-pythoninterp=yes --with-python-config-dir=/usr/local/lib/python2.7/config/ --with-x
+$ make
+# make install
+
+UNINSTALL
+---------
+Run the all same step as for installation, by replace install to uninstall
+# make uninstallConfigure Powerline Fonts using fontconfig
 ------------------------------------------
 
 1. Download the latest version of PowerlineSymbols OpenType font.
@@ -24,7 +119,7 @@ $ mv 10-powerline-symbols.conf ~/.config/fontconfig/fonts.conf/
    newly installed Powerline.
 
 --------------------------------------------------------------------------------
-Vim Airline
+Vim Airline                                                          *RDairline*
 -----------
 
 Lokaltog/vim-powerline, is a legacy vim plugin developed by Lokaltog.
@@ -58,7 +153,7 @@ let g:airline_powerline_fonts=1
 5. Update your terminal profile or Gvim to use the pre-patched font. Restart
    the terminal and vim, and you’re golden!
 --------------------------------------------------------------------------------
-Vim Airline through SSH with putty
+Vim Airline through SSH with putty                             *RDairline_putty*
 ----------------------------------
 
 1. Download fonts from https://github.com/powerline/fonts, or copy the
@@ -69,7 +164,7 @@ File->Install new font
 3. Putty setting
 Window->Appearance->Font
 --------------------------------------------------------------------------------
-Highlight unwanted spaces
+Highlight unwanted spaces                                          *RD_HLspaces*
 -------------------------
 
 For occasional use, you can simply search using a suitable pattern to highlight
@@ -88,7 +183,7 @@ hlsearch).
 " Show spaces before a tab:
 / \+\ze\t
 --------------------------------------------------------------------------------
-How-to install libclang
+How-to install libclang                                            *RD_libclang*
 -------------------------
 
 wget http://llvm.org/releases/3.3/llvm-3.3.src.tar.gz
@@ -102,3 +197,24 @@ llvm-3.3.src/tools/clang          <-- cfe-3.3.src
 
 $ make
 # make install
+--------------------------------------------------------------------------------
+vim helptags
+------------
+INSTALL
+ `-- doc
+      |-- setupnote.txt
+      `-- tags
+
+:helptags INSTALL/doc
+
+-- setupnote.txt Start ----------------
+*setupnote.txt*            usefull setup notes
+
+layer1                   |layer1|
+
+content of layer1        *layer1*
+vim:tw=78:ts=8:ft=help:norl:noet:fen:
+-- setupnote.txt End ------------------
+
+================================================================================
+vim:tw=78:ts=8:ft=help:norl:noet:fen:
