@@ -198,6 +198,7 @@ let g:clang_complete_macros = 1
 let g:clang_auto_select = 1
 let g:clang_snippets = 1
 let g:clang_conceal_snippets = 1
+let g:clang_snippets_engine = 'clang_complete'
 set concealcursor=inv
 set conceallevel=2
 
@@ -244,6 +245,8 @@ let g:DoxygenToolkit_dateTag="Date: "
 let g:DoxygenToolkit_versionTag="Version: "
 "-- syntastic
 " let g:syntastic_c_include_dirs=['/usr/local/include/libxml2']
+"-- SuperTab completion fall-back
+let g:SuperTabDefaultCompletionType = '<c-x><c-u><c-p>'
 " }}}
 
 "--- Key binding --- {{{
