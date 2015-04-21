@@ -3,8 +3,10 @@ SN_HLspaces	setupnote.txt	/*SN_HLspaces*
 SN_libclang	setupnote.txt	/*SN_libclang*
 SNairline	setupnote.txt	/*SNairline*
 SNairline_putty	setupnote.txt	/*SNairline_putty*
+SNclang_complete	setupnote.txt	/*SNclang_complete*
 SNcompile	setupnote.txt	/*SNcompile*
 SNhelptags	setupnote.txt	/*SNhelptags*
+SNsyntastic	setupnote.txt	/*SNsyntastic*
 layer1	setupnote.txt	/*layer1*
 setupnote.txt	setupnote.txt	/*setupnote.txt*
 setupnote.txt	setupnote.txt	/*setupnote.txt*

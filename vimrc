@@ -242,6 +242,8 @@ let g:DoxygenToolkit_authorTag="Author: "
 let g:DoxygenToolkit_fileTag="File: "
 let g:DoxygenToolkit_dateTag="Date: "
 let g:DoxygenToolkit_versionTag="Version: "
+"-- syntastic
+" let g:syntastic_c_include_dirs=['/usr/local/include/libxml2']
 " }}}
 
 "--- Key binding --- {{{
