@@ -149,6 +149,8 @@ $ ./install.sh
 or install prepatched font manually
 $ mv Sauce\ Code\ Powerline\ Regular.otf ~/.local/share/fonts/
 $ sudo fc-cache -v
+after install, check if that particular font is installed.
+$ fc-list | grep "Powerline"
 ---------------------------------------
 4. Next you need to add this to your .vimrc to enable automatic population of
    the g:airline_symbols:
