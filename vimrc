@@ -10,6 +10,7 @@ set wildmenu           " visual autocomplete for command menu
 set clipboard+=unnamed " sync clipboard with system's
 set undofile           " use an undo file
 set incsearch          " search as characters are entered
+set hidden             " improve vim-ctrlspace overall experience
 "-- Set a directory to store the undo history
 set undodir=~/.vimundo/
 "-- Disable auto start a comment line
@@ -89,6 +90,7 @@ Plugin 'tpope/vim-sleuth'
 Plugin 'hari-rangarajan/CCTree'
 Bundle 'ntpeters/vim-better-whitespace'
 Plugin 'godlygeek/tabular'
+Plugin 'szw/vim-ctrlspace'
 "--- color scheme
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'tomasr/molokai'
@@ -249,6 +251,8 @@ let g:DoxygenToolkit_versionTag="Version: "
 let g:SuperTabDefaultCompletionType = '<c-x><c-u><c-p>'
 "-- indentLine
 let g:indentLine_enabled = 0
+"-- ctrl-space
+let g:airline_exclude_preview = 1
 " }}}
 
 "--- Key binding --- {{{
