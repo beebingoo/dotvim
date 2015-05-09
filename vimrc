@@ -65,7 +65,7 @@ Bundle 'gmarik/vundle'
 "-- My Bundles here
 "-- Original GitHub repos
 Bundle 'kien/ctrlp.vim'
-" Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 "-- Legacy snipMate repo.
 " Bundle 'vim-scripts/snipMate'
@@ -278,6 +278,9 @@ nmap <leader>t :Gtags -g <C-r><C-w><CR>
 imap <C-J> <Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
 
+"-- F11 toggle NERDTree
+nnoremap <silent> <F11> :NERDTreeToggle<CR>     " open nerdtree
+
 "-- F10 Toggle Gundo
 nnoremap <F10> :GundoToggle<CR>
 
@@ -307,8 +310,6 @@ set pastetoggle=<F2>
 " nnoremap <silent> <F5> :tabp<CR>
 "-- F4 show clang output
 " nnoremap <F4> :call g:ClangUpdateQuickFix()<CR>
-"-- F8 toggle NERDTree
-" nnoremap <silent> <F8> :NERDTreeToggle<CR>     " open nerdtree
 "-- F7 create a new tab
 " nnoremap <silent> <F7> :tabnew<CR>
 "-- F6 next tab
