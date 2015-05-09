@@ -244,6 +244,12 @@ let g:airline#extensions#tagbar#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
+" Minimum number of tabs needed to show the tabline
+let g:airline#extensions#tabline#tab_min_count = 2
+" Don't show buffers names if opened only one file
+" let g:airline#extensions#tabline#buffer_min_count = 2
+" show_buffers treats buffer as tab, count as well.
+let g:airline#extensions#tabline#show_buffers = 0
 
 "-- DoxygenToolkit
 let g:DoxygenToolkit_briefTag_pre="Synopsis: "
