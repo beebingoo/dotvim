@@ -240,6 +240,11 @@ set laststatus=2
 "-- airline
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tagbar#enabled = 0
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
 "-- DoxygenToolkit
 let g:DoxygenToolkit_briefTag_pre="Synopsis: "
 let g:DoxygenToolkit_paramTag_pre="Param: "
