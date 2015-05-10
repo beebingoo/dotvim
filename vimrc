@@ -64,9 +64,28 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 "-- My Bundles here
 "-- Original GitHub repos
+"-- Search Plugin
 Bundle 'kien/ctrlp.vim'
+Bundle 'rking/ag.vim'
+Bundle 'Shougo/unite.vim'
+"-- Explorer
+Bundle 'sjl/gundo.vim'
+Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
+Plugin 'szw/vim-ctrlspace'
+" Call-Tree Explorer
+Plugin 'hari-rangarajan/CCTree'
+"-- Dispaly
+Plugin 'airblade/vim-gitgutter'
+Bundle 'scrooloose/syntastic'
+Bundle 'Yggdroot/indentLine'
+" nathanaelkane/vim-indent-guides uses listchar as indent guide
+" Bundle 'nathanaelkane/vim-indent-guides'
+" automatically adjusts 'shiftwidth' and 'expandtab'
+Plugin 'tpope/vim-sleuth'
+" All tailing whitespace charecters to be highlighten
+Bundle 'ntpeters/vim-better-whitespace'
+"-- Edit helper
 "-- Legacy snipMate repo.
 " Bundle 'vim-scripts/snipMate'
 "-- snipmate dependent
@@ -74,23 +93,15 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'scrooloose/syntastic'
-Bundle 'sjl/gundo.vim'
-Bundle 'Yggdroot/indentLine'
-" Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'majutsushi/tagbar'
+" automatic closing of quotes, parenthesis, brackets, etc.
 Bundle 'Raimondi/delimitMate'
-Bundle 'rking/ag.vim'
-Bundle 'Shougo/unite.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-sleuth'
-Plugin 'hari-rangarajan/CCTree'
-Bundle 'ntpeters/vim-better-whitespace'
+" Aligning text
 Plugin 'godlygeek/tabular'
-Plugin 'szw/vim-ctrlspace'
+" A Git wrapper
+Plugin 'tpope/vim-fugitive'
 "--- color scheme
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'tomasr/molokai'
