@@ -102,6 +102,8 @@ Bundle 'Raimondi/delimitMate'
 Plugin 'godlygeek/tabular'
 " A Git wrapper
 Plugin 'tpope/vim-fugitive'
+" HTML css
+Plugin 'mattn/emmet-vim'
 "--- color scheme
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'tomasr/molokai'
