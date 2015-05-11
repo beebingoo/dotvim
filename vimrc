@@ -265,14 +265,7 @@ let g:airline#extensions#tabline#tab_min_count = 2
 let g:airline#extensions#tabline#show_buffers = 0
 
 "-- DoxygenToolkit
-let g:DoxygenToolkit_briefTag_pre="Synopsis: "
-let g:DoxygenToolkit_paramTag_pre="Param: "
-let g:DoxygenToolkit_returnTag="Returns: "
 let g:DoxygenToolkit_authorName="beebingoo"
-let g:DoxygenToolkit_authorTag="Author: "
-let g:DoxygenToolkit_fileTag="File: "
-let g:DoxygenToolkit_dateTag="Date: "
-let g:DoxygenToolkit_versionTag="Version: "
 "-- syntastic
 " let g:syntastic_c_include_dirs=['/usr/local/include/libxml2']
 "-- SuperTab completion fall-back
