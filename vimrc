@@ -98,6 +98,8 @@ Bundle 'Rip-Rip/clang_complete'
 Bundle 'terryma/vim-multiple-cursors'
 " automatic closing of quotes, parenthesis, brackets, etc.
 Bundle 'Raimondi/delimitMate'
+" Appends, subsitutes or removes a comma or a semi-colon
+Plugin 'lfilho/cosco.vim'
 " Aligning text
 Plugin 'godlygeek/tabular'
 " A Git wrapper
@@ -274,6 +276,9 @@ let g:SuperTabDefaultCompletionType = '<c-x><c-u><c-p>'
 let g:indentLine_enabled = 0
 "-- ctrl-space
 let g:airline_exclude_preview = 1
+"-- cosco
+au FileType c,cpp,css,html,jacascript nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
+au FileType c,cpp,css,html,jacascript inoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
 " }}}
 
 "--- Key binding --- {{{
