@@ -104,8 +104,10 @@ Plugin 'lfilho/cosco.vim'
 Plugin 'godlygeek/tabular'
 " A Git wrapper
 Plugin 'tpope/vim-fugitive'
-" HTML css
+" HTML css JS
 Plugin 'mattn/emmet-vim'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
 "--- color scheme
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'tomasr/molokai'
@@ -202,7 +204,8 @@ let g:clang_use_library = 1
 if has("unix")
     let s:issue = system("cat /etc/issue | awk '$1 {print $1}'")
     if s:issue == "Ubuntu\n"
-	let g:clang_library_path = '/usr/lib/llvm-3.4/lib/'
+	" let g:clang_library_path = '/usr/lib/llvm-3.4/lib/'
+	let g:clang_library_path = '/usr/local/lib'
     else
 	let g:clang_library_path = '/usr/local/lib'
     endif

@@ -7,6 +7,7 @@ SNclang_complete	setupnote.txt	/*SNclang_complete*
 SNcompile	setupnote.txt	/*SNcompile*
 SNhelptags	setupnote.txt	/*SNhelptags*
 SNsyntastic	setupnote.txt	/*SNsyntastic*
+SNsyntastic_js	setupnote.txt	/*SNsyntastic_js*
 layer1	setupnote.txt	/*layer1*
 setupnote.txt	setupnote.txt	/*setupnote.txt*
 setupnote.txt	setupnote.txt	/*setupnote.txt*
