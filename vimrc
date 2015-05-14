@@ -94,7 +94,7 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'Rip-Rip/clang_complete'
+Plugin 'Valloric/YouCompleteMe'
 Bundle 'terryma/vim-multiple-cursors'
 " automatic closing of quotes, parenthesis, brackets, etc.
 Bundle 'Raimondi/delimitMate'
@@ -123,7 +123,6 @@ Bundle 'tComment'
 " Bundle 'Align'
 Bundle 'a.vim'
 Plugin 'DoxygenToolkit.vim'
-Bundle 'SuperTab'
 Plugin 'gtags.vim'
 Bundle 'DrawIt'
 
@@ -193,53 +192,9 @@ nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap <C-_>i :cs find i <C-R>=expand("<cfile>")<CR><CR> :copen<CR><CR>
 " }}}
 
-"--- Clang Complete Settings --- {{{
-let g:clang_use_library = 1
-"-- CentOS install clang manually before use below path.
-" let g:clang_library_path = '/usr/local/lib'
-"-- Ubuntu (# apt-get install libclang-dev) before use below path.
-"-- Use ($ locate libclang) to locate libclang after install,
-"-- and (# updatedb) to update the database locate depend on,
-"-- or ($ find /usr -name libclang*)
-if has("unix")
-    let s:issue = system("cat /etc/issue | awk '$1 {print $1}'")
-    if s:issue == "Ubuntu\n"
-	" let g:clang_library_path = '/usr/lib/llvm-3.4/lib/'
-	let g:clang_library_path = '/usr/local/lib'
-    else
-	let g:clang_library_path = '/usr/local/lib'
-    endif
-endif
-let g:clang_complete_copen = 1
-let g:clang_complete_macros = 1
-"let g:clang_complete_patterns = 1
-"-- Remove -std=c++11 if you don't use C++ for everything like I do.
-"let g:clang_user_options='-std=c++11 || exit 0'
-let g:clang_auto_select = 1
-let g:clang_snippets = 1
-let g:clang_conceal_snippets = 1
-let g:clang_snippets_engine = 'clang_complete'
-set concealcursor=inv
-set conceallevel=2
-
-"-- If you prefer the Omni-Completion tip window to close when a selection is
-"-- made, these lines close it on movement in insert mode or when leaving
-"-- insert mode
-autocmd CursorMovedI * if pumvisible() == 0 && bufname("%") != "[Command Line]"|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0 && bufname("%") != "[Command Line]"|pclose|endif
-
-" Troubleshootings
-" Q: The completion works with the clang executable but when I use the clang
-"    library I have the following error message: 'User defined completion
-"    (^U^N^P) Pattern not found'
-" A: Most of the time this is due to a compilation error. To identify the
-"    problem do :call g:ClangUpdateQuickFix() followed by :copen. If you do not
-"    see any compilation problem and you still have '... Pattern not found'
-"    check that the clang library's is correctly loaded (put some debug messages
-"    in libclang.py to understand what happens).
-" }}}
-
 "--- Plugin setting --- {{{
+"-- YouCompleteMe setting
+let g:ycm_path_to_python_interpreter = '/usr/local/bin/python2.7'
 "-- Taglist setting
 "--- Real-time update tags
 let Tlist_Process_File_Always=1
@@ -273,8 +228,6 @@ let g:airline#extensions#tabline#show_buffers = 0
 let g:DoxygenToolkit_authorName="beebingoo"
 "-- syntastic
 " let g:syntastic_c_include_dirs=['/usr/local/include/libxml2']
-"-- SuperTab completion fall-back
-let g:SuperTabDefaultCompletionType = '<c-x><c-u><c-p>'
 "-- indentLine
 let g:indentLine_enabled = 0
 "-- ctrl-space
@@ -328,8 +281,6 @@ set pastetoggle=<F2>
 
 "-- F5 previous tab
 " nnoremap <silent> <F5> :tabp<CR>
-"-- F4 show clang output
-" nnoremap <F4> :call g:ClangUpdateQuickFix()<CR>
 "-- F7 create a new tab
 " nnoremap <silent> <F7> :tabnew<CR>
 "-- F6 next tab
