@@ -305,9 +305,16 @@ nnoremap <F8> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
 
 "-- F7 Toggle indentline
 nnoremap <F7> :IndentLinesToggle<CR>
+"-- F7 create a new tab
+" nnoremap <silent> <F7> :tabnew<CR>
 
+"-- F6 next tab
+nnoremap <silent> <F6> :tabn<CR>
+"
+"-- F5 previous tab
+nnoremap <silent> <F5> :tabp<CR>
 "-- F5 delete all trailing whitespace
-nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+" nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 "-- F4 disable auto indent
 nnoremap <F4> :setl noai nocin nosi inde=<CR>
@@ -317,14 +324,5 @@ nnoremap <silent> <f3> :setlocal comments-=:// comments+=f://<CR>
 
 "-- F2 Toggle paste mode
 set pastetoggle=<F2>
-
-"-- F5 previous tab
-" nnoremap <silent> <F5> :tabp<CR>
-"-- F4 show clang output
-" nnoremap <F4> :call g:ClangUpdateQuickFix()<CR>
-"-- F7 create a new tab
-" nnoremap <silent> <F7> :tabnew<CR>
-"-- F6 next tab
-" nnoremap <silent> <f6> :tabn<CR>
 
 " }}}
