@@ -86,13 +86,6 @@ Plugin 'tpope/vim-sleuth'
 " All tailing whitespace charecters to be highlighten
 Bundle 'ntpeters/vim-better-whitespace'
 "-- Edit helper
-"-- Legacy snipMate repo.
-" Bundle 'vim-scripts/snipMate'
-"-- snipmate dependent
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'honza/vim-snippets'
-Bundle 'garbas/vim-snipmate'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'terryma/vim-multiple-cursors'
@@ -104,6 +97,9 @@ Plugin 'lfilho/cosco.vim'
 Plugin 'godlygeek/tabular'
 " A Git wrapper
 Plugin 'tpope/vim-fugitive'
+" snippets
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 " HTML css JS
 Plugin 'mattn/emmet-vim'
 Plugin 'jelera/vim-javascript-syntax'
@@ -293,10 +289,6 @@ imap <silent> <C-T><C-T> <C-R>=strftime("%l:%M %p")<CR>
 nmap <leader>d :Gtags <C-r><C-w><CR>
 nmap <leader>c :Gtags -r <C-r><C-w><CR>
 nmap <leader>t :Gtags -g <C-r><C-w><CR>
-
-"-- <tab> in snipmate conflict with clang_complete
-imap <C-J> <Plug>snipMateNextOrTrigger
-smap <C-J> <Plug>snipMateNextOrTrigger
 
 "-- F11 toggle NERDTree
 nnoremap <silent> <F11> :NERDTreeToggle<CR>     " open nerdtree
