@@ -88,6 +88,8 @@ Bundle 'ntpeters/vim-better-whitespace'
 "-- Edit helper
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'Rip-Rip/clang_complete'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
 Bundle 'terryma/vim-multiple-cursors'
 " automatic closing of quotes, parenthesis, brackets, etc.
 Bundle 'Raimondi/delimitMate'
@@ -119,7 +121,7 @@ Bundle 'tComment'
 " Bundle 'Align'
 Bundle 'a.vim'
 Plugin 'DoxygenToolkit.vim'
-Bundle 'SuperTab'
+" Bundle 'SuperTab'
 Plugin 'gtags.vim'
 Bundle 'DrawIt'
 
@@ -200,8 +202,7 @@ let g:clang_use_library = 1
 if has("unix")
     let s:issue = system("cat /etc/issue | awk '$1 {print $1}'")
     if s:issue == "Ubuntu\n"
-	" let g:clang_library_path = '/usr/lib/llvm-3.4/lib/'
-	let g:clang_library_path = '/usr/local/lib'
+	let g:clang_library_path = '/usr/lib/llvm-3.6/lib/'
     else
 	let g:clang_library_path = '/usr/local/lib'
     endif
@@ -233,6 +234,22 @@ autocmd InsertLeave * if pumvisible() == 0 && bufname("%") != "[Command Line]"|p
 "    see any compilation problem and you still have '... Pattern not found'
 "    check that the clang library's is correctly loaded (put some debug messages
 "    in libclang.py to understand what happens).
+" }}}
+
+"--- YouCompleteMe setting --- {{{
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_key_list_select_completion = ['<TAB>', '<c-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
+"-- ultisnips trigger configuration
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"-- syntastic
+let g:syntastic_always_populate_loc_list = 1
+"-- SuperTab completion fall-back
+" let g:SuperTabDefaultCompletionType = '<c-x><c-u><c-p>'
 " }}}
 
 "--- Plugin setting --- {{{
@@ -267,10 +284,6 @@ let g:airline#extensions#tabline#show_buffers = 0
 
 "-- DoxygenToolkit
 let g:DoxygenToolkit_authorName="beebingoo"
-"-- syntastic
-" let g:syntastic_c_include_dirs=['/usr/local/include/libxml2']
-"-- SuperTab completion fall-back
-let g:SuperTabDefaultCompletionType = '<c-x><c-u><c-p>'
 "-- indentLine
 let g:indentLine_enabled = 0
 "-- ctrl-space
