@@ -106,6 +106,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'mattn/emmet-vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
+Plugin 'marijnh/tern_for_vim'
 "--- color scheme
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'tomasr/molokai'
