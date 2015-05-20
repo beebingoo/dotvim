@@ -254,13 +254,6 @@ let g:syntastic_always_populate_loc_list = 1
 " }}}
 
 "--- Plugin setting --- {{{
-"-- Taglist setting
-"--- Real-time update tags
-let Tlist_Process_File_Always=1
-"--- Automatically close the tags tree for inactive files
-let Tlist_File_Fold_Auto_Close=1
-let Tlist_Close_On_Select = 1
-let Tlist_GainFocus_On_ToggleOpen = 1
 "-- CtrlP
 let g:ctrlp_max_files=0
 " Use the nearest .git directory as the cwd
