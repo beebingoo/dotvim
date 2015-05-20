@@ -105,7 +105,6 @@ Plugin 'honza/vim-snippets'
 " HTML css JS
 Plugin 'mattn/emmet-vim'
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'pangloss/vim-javascript'
 Plugin 'marijnh/tern_for_vim'
 "--- color scheme
 Plugin 'nanotech/jellybeans.vim'
@@ -285,6 +284,8 @@ let g:airline_exclude_preview = 1
 "-- cosco
 au FileType c,cpp,css,html,jacascript nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
 au FileType c,cpp,css,html,jacascript inoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
+"-- vim-javascript-syntax
+au FileType javascript call JavaScriptFold()
 " }}}
 
 "--- Key binding --- {{{
