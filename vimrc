@@ -84,6 +84,9 @@ Bundle 'Yggdroot/indentLine'
 " automatically adjusts 'shiftwidth' and 'expandtab'
 Plugin 'tpope/vim-sleuth'
 " All tailing whitespace charecters to be highlighten
+" An alternative way to highlight tailing whitespace
+" highlight ExtraWhitespace ctermbg=darkgreen guibg=bg
+" match ExtraWhitespace /\s\+$/
 Bundle 'ntpeters/vim-better-whitespace'
 "-- Edit helper
 Bundle 'scrooloose/nerdcommenter'
@@ -152,9 +155,9 @@ se t_Co=256
 " let g:solarized_termcolors=256
 set background=dark
 colorscheme mustang
-highlight ColorColumn ctermfg=yellow ctermbg=bg guibg=#2c2d27
 " set colorcolumn=80
-let &colorcolumn=join(range(81,999),",")
+highlight OverLength ctermfg=yellow ctermbg=bg guibg=#2c2d27
+2match OverLength /\%81v.*/
 set textwidth=80
 "-- Useful to align text.
 " set cursorcolumn
