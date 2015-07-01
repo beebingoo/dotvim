@@ -278,6 +278,9 @@ let g:airline#extensions#tabline#tab_min_count = 2
 " show_buffers treats buffer as tab, count as well.
 let g:airline#extensions#tabline#show_buffers = 0
 
+"-- tagbar
+let g:tagbar_autoclose = 1
+
 "-- DoxygenToolkit
 let g:DoxygenToolkit_authorName="beebingoo"
 "-- indentLine
