@@ -261,7 +261,7 @@ let g:ctrlp_max_files=0
 " Use the nearest .git directory as the cwd
 " This makes a lot of sense if you are working on a project that is in
 " version control. It also supports works with .svn.
-let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_working_path_mode = 'rw'
 "-- Powerline
 set laststatus=2
 "-- airline
