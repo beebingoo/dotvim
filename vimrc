@@ -67,6 +67,7 @@ Bundle 'gmarik/vundle'
 "-- Search Plugin
 Bundle 'kien/ctrlp.vim'
 Bundle 'rking/ag.vim'
+Plugin 'mileszs/ack.vim'
 Bundle 'Shougo/unite.vim'
 "-- Explorer
 Bundle 'sjl/gundo.vim'
