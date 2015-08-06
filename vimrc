@@ -11,6 +11,7 @@ set clipboard+=unnamed " sync clipboard with system's
 set undofile           " use an undo file
 set incsearch          " search as characters are entered
 set hidden             " improve vim-ctrlspace overall experience
+set nowrap             " use zl zh to Scrolling horizontally
 "-- Set a directory to store the undo history
 set undodir=~/.vimundo/
 "-- Disable auto start a comment line
