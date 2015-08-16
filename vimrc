@@ -74,6 +74,7 @@ Bundle 'Shougo/unite.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'szw/vim-ctrlspace'
 " Call-Tree Explorer
 Plugin 'hari-rangarajan/CCTree'
