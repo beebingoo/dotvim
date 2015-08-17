@@ -75,6 +75,7 @@ Bundle 'Shougo/unite.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdtree'
+" load nerdtree-git-plugin before vim-devicons loads
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'szw/vim-ctrlspace'
 " Call-Tree Explorer
@@ -330,6 +331,9 @@ au VimEnter * call NERDTreeHighlightFile('rb', 'Red', 'none', '#ffa500', '#15151
 au VimEnter * call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 au VimEnter * call NERDTreeHighlightFile('h', 'green', 'none', 'green', '#151515')
 au VimEnter * call NERDTreeHighlightFile('Makefile', 'blue', 'none', '#3366FF', '#151515')
+
+"-- nerdtree-git-plugin
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 " }}}
 
 "--- Key binding --- {{{
