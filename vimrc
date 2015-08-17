@@ -70,6 +70,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'rking/ag.vim'
 Plugin 'mileszs/ack.vim'
 Bundle 'Shougo/unite.vim'
+
 "-- Explorer
 Bundle 'sjl/gundo.vim'
 Bundle 'majutsushi/tagbar'
@@ -78,6 +79,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'szw/vim-ctrlspace'
 " Call-Tree Explorer
 Plugin 'hari-rangarajan/CCTree'
+
 "-- Dispaly
 Plugin 'airblade/vim-gitgutter'
 Bundle 'scrooloose/syntastic'
@@ -92,6 +94,7 @@ Plugin 'tpope/vim-sleuth'
 " match ExtraWhitespace /\s\+$/
 Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'ryanoasis/vim-devicons'
+
 "-- Edit helper
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'Rip-Rip/clang_complete'
@@ -113,6 +116,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'mattn/emmet-vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'marijnh/tern_for_vim'
+
 "--- color scheme
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'tomasr/molokai'
@@ -122,6 +126,7 @@ Bundle 'croaker/mustang-vim'
 " Bundle 'OmniCppComplete'
 Bundle 'surround.vim'
 Bundle 'tComment'
+
 "-- FuzzyFinder dependent
 " Bundle 'L9'
 " Bundle 'FuzzyFinder'
@@ -266,8 +271,10 @@ let g:ctrlp_max_files=0
 " This makes a lot of sense if you are working on a project that is in
 " version control. It also supports works with .svn.
 let g:ctrlp_working_path_mode = 'rw'
+
 "-- Powerline
 set laststatus=2
+
 "-- airline
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tagbar#enabled = 0
@@ -287,15 +294,20 @@ let g:tagbar_autoclose = 1
 
 "-- DoxygenToolkit
 let g:DoxygenToolkit_authorName="beebingoo"
+
 "-- indentLine
 let g:indentLine_enabled = 0
+
 "-- ctrl-space
 let g:airline_exclude_preview = 1
+
 "-- cosco
 au FileType c,cpp,css,html,jacascript nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
 au FileType c,cpp,css,html,jacascript inoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
+
 "-- vim-javascript-syntax
 au FileType javascript call JavaScriptFold()
+
 " NERDTress File highlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
 exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
