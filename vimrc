@@ -17,6 +17,9 @@ set undodir=~/.vimundo/
 "-- Disable auto start a comment line
 " autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 au FileType c,cpp setlocal comments-=:// comments+=f://
+"-- Auto read files when sensory external changes
+set autoread
+au CursorHold,CursorHoldI * checktime
 "-- Set file encoding
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
