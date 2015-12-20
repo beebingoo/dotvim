@@ -146,6 +146,7 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'tomasr/molokai'
 Bundle 'croaker/mustang-vim'
+Bundle 'altercation/vim-colors-solarized'
 
 "-- Vim-script repos
 " Bundle 'OmniCppComplete'
@@ -185,10 +186,15 @@ syntax on
 " }}}
 
 "--- Color scheme setting --- {{{
-se t_Co=256
+
+" solarized colorscheme
+" set term=screen-256color-bce
+" set t_Co=256
+" set t_Co=16
 " let g:solarized_termcolors=256
-set background=dark
-colorscheme mustang
+set background=dark " dark | light "
+colorscheme solarized
+
 " set colorcolumn=80
 highlight OverLength ctermfg=yellow ctermbg=bg guibg=#2c2d27
 2match OverLength /\%81v.*/
@@ -392,9 +398,11 @@ nnoremap <F7> :IndentLinesToggle<CR>
 nnoremap <silent> <F6> :tabn<CR>
 "
 "-- F5 previous tab
-nnoremap <silent> <F5> :tabp<CR>
+" nnoremap <silent> <F5> :tabp<CR>
 "-- F5 delete all trailing whitespace
 " nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+"-- F5 toggle color scheme
+call togglebg#map("<F5>")
 
 "-- F4 disable auto indent
 nnoremap <F4> :setl noai nocin nosi inde=<CR>

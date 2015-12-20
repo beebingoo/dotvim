@@ -13,6 +13,7 @@ The requested URL returned error: 403 Forbidden                 |SN403Forbidden|
 Generate .clang_complete                                      |SNclang_complete|
 scrooloose/syntastic with libxml2                                  |SNsyntastic|
 scrooloose/syntastic with nodejs,jshint                         |SNsyntastic_js|
+solarized Gnome Terminal + Tmux + Vim                        |SNcolor_solarized|
 ================================================================================
 --------------------------------------------------------------------------------
 How-To compile vim on CentOS 6.6                                     *SNcompile*
@@ -278,5 +279,40 @@ Install jshint
 $ sudo apt-get install g++ curl libssl-dev apache2-utils git-core
 $ curl -L https://npmjs.org/install.sh | sudo sh
 $ sudo npm install -g jshint
-================================================================================
+
+
+solarized Gnome Terminal + Tmux + Vim
+
+*SNcolor_solarized*
+
+
+# store all solarized files in one place
+$ mkdir ~/.solarized
+$ cd ~/.solarized
+
+# http://www.webupd8.org/2011/04/solarized-must-have-color-paletter-for.html
+
+$ git clone https://github.com/seebi/dircolors-solarized.git
+$ eval `dircolors ~/.solarized/dircolors-solarized/dircolors.256dark`
+$ ln -s ~/.solarized/dircolors-solarized/dircolors.256dark ~/.dir_colors
+
+$ git clone https://github.com/sigurdga/gnome-terminal-colors-solarized.git
+$ ./gnome-terminal-colors-solarized/install.sh
+
+$ git clone https://github.com/seebi/tmux-colors-solarized.git
+$ echo "
+set -g default-terminal \"screen-256color-bce\"
+source ~/.solarized/tmux-colors-solarized/tmuxcolors.conf" >> ~/.tmux.conf
+
+
+# http://twoism.posterous.com/vim-janus-and-solarized-on-ubuntu-done-right
+# git clone https://github.com/altercation/vim-colors-solarized.git
+
+$ echo "
+set term=screen-256color-bce
+let g:solarized_termcolors=256
+set t_Co=256
+set background=dark
+Colorscheme default " >> ~/.vimrc.after
+===============================================================================
 vim:tw=78:ts=8:ft=help:norl:noet:fen:
