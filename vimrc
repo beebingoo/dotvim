@@ -80,13 +80,13 @@ set nocompatible
 "-- Required!
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 "-- let Vundle manage Vundle
 "-- ($ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle)
 "-- Required!
-Bundle 'gmarik/vundle'
+Bundle 'VundleVim/Vundle.vim'
 "-- My Bundles here
 "-- Original GitHub repos
 "-- Search Plugin
