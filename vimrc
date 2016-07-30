@@ -188,7 +188,7 @@ syntax on
 se t_Co=256
 " let g:solarized_termcolors=256
 set background=dark
-colorscheme mustang
+colorscheme desert256
 " set colorcolumn=80
 highlight OverLength ctermfg=yellow ctermbg=bg guibg=#2c2d27
 2match OverLength /\%81v.*/
