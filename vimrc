@@ -188,9 +188,9 @@ syntax on
 se t_Co=256
 " let g:solarized_termcolors=256
 set background=dark
-colorscheme desert256
+" colorscheme monokai
 " set colorcolumn=80
-highlight OverLength ctermfg=yellow ctermbg=bg guibg=#2c2d27
+highlight OverLength ctermfg=yellow ctermbg=NONE guibg=#2c2d27
 2match OverLength /\%81v.*/
 set textwidth=80
 "-- Useful to align text.
