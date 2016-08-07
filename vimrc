@@ -86,19 +86,19 @@ call vundle#begin()
 "-- let Vundle manage Vundle
 "-- ($ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle)
 "-- Required!
-Bundle 'VundleVim/Vundle.vim'
-"-- My Bundles here
+Plugin 'VundleVim/Vundle.vim'
+"-- My Plugins here
 "-- Original GitHub repos
 "-- Search Plugin
-Bundle 'kien/ctrlp.vim'
-Bundle 'rking/ag.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'rking/ag.vim'
 Plugin 'mileszs/ack.vim'
-Bundle 'Shougo/unite.vim'
+Plugin 'Shougo/unite.vim'
 
 "-- Explorer
-Bundle 'sjl/gundo.vim'
-Bundle 'majutsushi/tagbar'
-Bundle 'scrooloose/nerdtree'
+Plugin 'sjl/gundo.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdtree'
 " load nerdtree-git-plugin before vim-devicons loads
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'szw/vim-ctrlspace'
@@ -107,27 +107,27 @@ Plugin 'hari-rangarajan/CCTree'
 
 "-- Dispaly
 Plugin 'airblade/vim-gitgutter'
-Bundle 'scrooloose/syntastic'
-Bundle 'Yggdroot/indentLine'
+Plugin 'scrooloose/syntastic'
+Plugin 'Yggdroot/indentLine'
 " nathanaelkane/vim-indent-guides uses listchar as indent guide
-" Bundle 'nathanaelkane/vim-indent-guides'
+" Plugin 'nathanaelkane/vim-indent-guides'
 " automatically adjusts 'shiftwidth' and 'expandtab'
 Plugin 'tpope/vim-sleuth'
 " All tailing whitespace charecters to be highlighten
 " An alternative way to highlight tailing whitespace
 " highlight ExtraWhitespace ctermbg=darkgreen guibg=bg
 " match ExtraWhitespace /\s\+$/
-Bundle 'ntpeters/vim-better-whitespace'
-Bundle 'ryanoasis/vim-devicons'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'ryanoasis/vim-devicons'
 
 "-- Edit helper
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'Rip-Rip/clang_complete'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Rip-Rip/clang_complete'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
-Bundle 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-multiple-cursors'
 " automatic closing of quotes, parenthesis, brackets, etc.
-Bundle 'Raimondi/delimitMate'
+Plugin 'Raimondi/delimitMate'
 " Appends, subsitutes or removes a comma or a semi-colon
 Plugin 'lfilho/cosco.vim'
 " Aligning text
@@ -143,42 +143,42 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'marijnh/tern_for_vim'
 
 "--- color scheme
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'tomasr/molokai'
-Bundle 'croaker/mustang-vim'
+Plugin 'sickill/vim-monokai'
 
 "-- Vim-script repos
-" Bundle 'OmniCppComplete'
-Bundle 'surround.vim'
-Bundle 'tComment'
+" Plugin 'OmniCppComplete'
+Plugin 'surround.vim'
+Plugin 'tComment'
 
 "-- FuzzyFinder dependent
-" Bundle 'L9'
-" Bundle 'FuzzyFinder'
-" Bundle 'Align'
-Bundle 'a.vim'
+" Plugin 'L9'
+" Plugin 'FuzzyFinder'
+" Plugin 'Align'
+Plugin 'a.vim'
 Plugin 'DoxygenToolkit.vim'
-" Bundle 'SuperTab'
+" Plugin 'SuperTab'
 Plugin 'gtags.vim'
-Bundle 'DrawIt'
+Plugin 'DrawIt'
 
 "-- Slow-down vim plugin {{{
 "--- Legacy powerline repo
-" Bundle 'Lokaltog/vim-powerline'
-Plugin 'bling/vim-airline'
-" Bundle 'taglist.vim'
+" Plugin 'Lokaltog/vim-powerline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'taglist.vim'
+call vundle#end()
 "}}}
 
 filetype plugin indent on     " Required!
 
  " Brief help
- " :BundleList          - list configured bundles
- " :BundleInstall(!)    - install(update) bundles
- " :BundleSearch(!) foo - search(or refresh cache first) for foo
- " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+ " :PluginList          - list configured bundles
+ " :PluginInstall(!)    - install(update) bundles
+ " :PluginSearch(!) foo - search(or refresh cache first) for foo
+ " :PluginClean(!)      - confirm(or auto-approve) removal of unused bundles
  "
  " see :h vundle for more details or wiki for FAQ
- " NOTE: comments after Bundle command are not allowed..
+ " NOTE: comments after Plugin command are not allowed..
 
 syntax enable
 syntax on
