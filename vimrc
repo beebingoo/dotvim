@@ -80,93 +80,98 @@ set nocompatible
 "-- Required!
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
 
-"-- let Vundle manage Vundle
-"-- ($ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle)
-"-- Required!
-Plugin 'VundleVim/Vundle.vim'
-"-- My Plugins here
+" Make sure you use single quotes
+
 "-- Original GitHub repos
-"-- Search Plugin
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'rking/ag.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'Shougo/unite.vim'
+"-- Search Plug
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'rking/ag.vim'
+Plug 'mileszs/ack.vim'
+Plug 'Shougo/unite.vim'
 
 "-- Explorer
-Plugin 'sjl/gundo.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'scrooloose/nerdtree'
+Plug 'sjl/gundo.vim'
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " load nerdtree-git-plugin before vim-devicons loads
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'szw/vim-ctrlspace'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'szw/vim-ctrlspace'
 " Call-Tree Explorer
-Plugin 'hari-rangarajan/CCTree'
+Plug 'hari-rangarajan/CCTree'
 
 "-- Dispaly
-Plugin 'airblade/vim-gitgutter'
-Plugin 'scrooloose/syntastic'
-Plugin 'Yggdroot/indentLine'
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/syntastic'
+Plug 'Yggdroot/indentLine'
 " nathanaelkane/vim-indent-guides uses listchar as indent guide
-" Plugin 'nathanaelkane/vim-indent-guides'
+" Plug 'nathanaelkane/vim-indent-guides'
 " automatically adjusts 'shiftwidth' and 'expandtab'
-Plugin 'tpope/vim-sleuth'
+Plug 'tpope/vim-sleuth'
 " All tailing whitespace charecters to be highlighten
 " An alternative way to highlight tailing whitespace
 " highlight ExtraWhitespace ctermbg=darkgreen guibg=bg
 " match ExtraWhitespace /\s\+$/
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'ryanoasis/vim-devicons'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'ryanoasis/vim-devicons'
 
 "-- Edit helper
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'Rip-Rip/clang_complete'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator'
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'scrooloose/nerdcommenter'
+Plug 'Rip-Rip/clang_complete'
+function! BuildYCM(info)
+  " info is a dictionary with 3 fields
+  " - name:   name of the plugin
+  " - status: 'installed', 'updated', or 'unchanged'
+  " - force:  set on PlugInstall! or PlugUpdate!
+  if a:info.status == 'installed' || a:info.force
+    !./install.py
+  endif
+endfunction
+
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+Plug 'terryma/vim-multiple-cursors'
 " automatic closing of quotes, parenthesis, brackets, etc.
-Plugin 'Raimondi/delimitMate'
+Plug 'Raimondi/delimitMate'
 " Appends, subsitutes or removes a comma or a semi-colon
-Plugin 'lfilho/cosco.vim'
+Plug 'lfilho/cosco.vim'
 " Aligning text
-Plugin 'godlygeek/tabular'
+Plug 'godlygeek/tabular'
 " A Git wrapper
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 " snippets
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 " HTML css JS
-Plugin 'mattn/emmet-vim'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'marijnh/tern_for_vim'
+Plug 'mattn/emmet-vim'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'marijnh/tern_for_vim'
 
 "--- color scheme
-Plugin 'sickill/vim-monokai'
+Plug 'sickill/vim-monokai'
 
 "-- Vim-script repos
-" Plugin 'OmniCppComplete'
-Plugin 'surround.vim'
-Plugin 'tComment'
+" Plug 'OmniCppComplete'
+Plug 'surround.vim'
+Plug 'tComment'
 
 "-- FuzzyFinder dependent
-" Plugin 'L9'
-" Plugin 'FuzzyFinder'
-" Plugin 'Align'
-Plugin 'a.vim'
-Plugin 'DoxygenToolkit.vim'
-" Plugin 'SuperTab'
-Plugin 'gtags.vim'
-Plugin 'DrawIt'
+" Plug 'L9'
+" Plug 'FuzzyFinder'
+" Plug 'Align'
+Plug 'a.vim'
+Plug 'DoxygenToolkit.vim'
+" Plug 'SuperTab'
+Plug 'gtags.vim'
+Plug 'DrawIt'
 
 "-- Slow-down vim plugin {{{
 "--- Legacy powerline repo
-" Plugin 'Lokaltog/vim-powerline'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-" Plugin 'taglist.vim'
-call vundle#end()
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+" Plug 'taglist.vim'
+call plug#end()
 "}}}
 
 filetype plugin indent on     " Required!
