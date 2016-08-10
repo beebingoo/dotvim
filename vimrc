@@ -149,7 +149,12 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " HTML css JS
 Plug 'mattn/emmet-vim'
 Plug 'jelera/vim-javascript-syntax'
-Plug 'marijnh/tern_for_vim'
+function! BuildTern(info)
+  if a:info.status == 'installed' || a:info.force
+    !npm install
+  endif
+endfunction
+Plug 'marijnh/tern_for_vim', { 'do': function('BuildTern') }
 
 "--- color scheme
 Plug 'sickill/vim-monokai'
