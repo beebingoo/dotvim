@@ -101,7 +101,12 @@ Plug 'hari-rangarajan/CCTree'
 "-- Dispaly
 Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-signify'
-Plug 'scrooloose/syntastic'
+function! Installjshint(info)
+  if a:info.status == 'installed' || a:info.force
+    !npm install -g jshint
+  endif
+endfunction
+Plug 'scrooloose/syntastic', { 'do': function('Installjshint') }
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-sensible'
 " nathanaelkane/vim-indent-guides uses listchar as indent guide
