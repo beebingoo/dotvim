@@ -103,6 +103,7 @@ Plug 'hari-rangarajan/CCTree'
 
 "-- Dispaly
 Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
 Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 " nathanaelkane/vim-indent-guides uses listchar as indent guide
