@@ -9,11 +9,8 @@ set showcmd            " show command in bottom bar
 set wildmenu           " visual autocomplete for command menu
 set clipboard+=unnamed " sync clipboard with system's
 set undofile           " use an undo file
-set incsearch          " search as characters are entered
 set hidden             " improve vim-ctrlspace overall experience
 set nowrap             " use zl zh to Scrolling horizontally
-"  allow the backspace key to erase previously entered
-set backspace=indent,eol,start
 " Or
 " set backspace=2
 "-- Set a directory to store the undo history
@@ -106,6 +103,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-signify'
 Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
+Plug 'tpope/vim-sensible'
 " nathanaelkane/vim-indent-guides uses listchar as indent guide
 " Plug 'nathanaelkane/vim-indent-guides'
 " automatically adjusts 'shiftwidth' and 'expandtab'
