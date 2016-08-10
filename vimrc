@@ -140,9 +140,8 @@ Plug 'lfilho/cosco.vim'
 Plug 'godlygeek/tabular'
 " A Git wrapper
 Plug 'tpope/vim-fugitive'
-" snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+" Group dependencies, vim-snippets depends on ultisnips
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " HTML css JS
 Plug 'mattn/emmet-vim'
 Plug 'jelera/vim-javascript-syntax'
