@@ -121,6 +121,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'ryanoasis/vim-devicons'
 
 "-- Edit helper
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Rip-Rip/clang_complete'
 function! BuildYCM(info)
