@@ -90,13 +90,13 @@ Plug 'Shougo/unite.vim'
 
 "-- Explorer
 Plug 'sjl/gundo.vim'
-Plug 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar', { 'on':  'TagbarToggle' }
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " load nerdtree-git-plugin before vim-devicons loads
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'szw/vim-ctrlspace'
 " Call-Tree Explorer
-Plug 'hari-rangarajan/CCTree'
+Plug 'hari-rangarajan/CCTree', { 'for': ['c', 'cpp'] }
 
 "-- Dispaly
 Plug 'airblade/vim-gitgutter'
@@ -147,14 +147,14 @@ Plug 'tpope/vim-fugitive'
 " Group dependencies, vim-snippets depends on ultisnips
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " HTML css JS
-Plug 'mattn/emmet-vim'
-Plug 'jelera/vim-javascript-syntax'
+Plug 'mattn/emmet-vim', { 'for': 'html' }
+Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 function! BuildTern(info)
   if a:info.status == 'installed' || a:info.force
     !npm install
   endif
 endfunction
-Plug 'marijnh/tern_for_vim', { 'do': function('BuildTern') }
+Plug 'marijnh/tern_for_vim', { 'do': function('BuildTern'), 'for': 'jacascript' }
 
 "--- color scheme
 Plug 'sickill/vim-monokai'
