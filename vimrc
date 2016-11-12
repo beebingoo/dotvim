@@ -143,6 +143,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'lfilho/cosco.vim'
 " Aligning text
 Plug 'godlygeek/tabular'
+Plug 'junegunn/vim-easy-align'
 " A Git wrapper
 Plug 'tpope/vim-fugitive'
 " Group dependencies, vim-snippets depends on ultisnips
@@ -330,6 +331,13 @@ let g:airline#extensions#tabline#show_buffers = 0
 
 "-- tagbar
 let g:tagbar_autoclose = 1
+
+"-- vim-easy-align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 "-- DoxygenToolkit
 let g:DoxygenToolkit_authorName="beebingoo"
