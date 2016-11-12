@@ -253,7 +253,7 @@ let g:clang_use_library = 1
 if has("unix")
     let s:issue = system("cat /etc/issue | awk '$1 {print $1}'")
     if s:issue == "Ubuntu\n"
-	let g:clang_library_path = '/usr/lib/llvm-3.6/lib/'
+	let g:clang_library_path = '/usr/lib/llvm-3.8/lib/'
     else
 	let g:clang_library_path = '/usr/local/lib'
     endif
