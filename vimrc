@@ -103,7 +103,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-signify'
 function! Installjshint(info)
   if a:info.status == 'installed' || a:info.force
-    !npm install -g jshint
+    !sudo npm install -g jshint
   endif
 endfunction
 Plug 'scrooloose/syntastic', { 'do': function('Installjshint') }
