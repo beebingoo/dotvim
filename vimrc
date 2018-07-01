@@ -1,3 +1,8 @@
+" Dependencies
+" npm
+" libclang-dev
+" ctags cscope
+" cmake
 "--- Common setting --- {{{
 set tabstop=4          " number of visual spaces per TAB
 set shiftwidth=4
